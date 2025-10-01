@@ -9,9 +9,11 @@ ch[b]{color:#000;}
 cb,n{flex-grow:1;}
 ct{order:1;margin:2px;padding:1px 2px;background:#000;color:#fff;}
 cb{order:2;margin:0 3px;justify-content:space-between;font-family:monospace;}
-cf{order:3;}
-od{order:3;align-self:flex-end;margin:0 2px;min-height:1em;}
-od:not(:empty)::after{content:" OD";}
+cf{order:3;justify-content:space-between;}
+att{order:1;}
+ods{order:2;margin:0 2px;min-height:1em;}
+od{margin-left:0.5em;}
+/*od:not(:empty)::after{content:" OD";}*/
 od[title]{text-decoration:underline dotted;}
 n{order:1;padding-right:1em;}
 oc{order:2;flex-grow:0;}
@@ -25,38 +27,38 @@ k::before{content:">";}
 k::after{content:"K";}
 </style></head><body>
 <h3>Precursor Medications</h3><cr>
-<ch b style="background:#731024"><ct><n>Inaprovaline</n><oc>3</oc></ct><od>no</od><cb><ef>0.1u/s<br>-2.00 asphyxiation when critical<br>reduces bleeding</ef><re>oxygen<br>carbon<br>sugar</re></cb></ch>
-<ch b style="background:#bf3d19"><ct><n>Kelotane    </n><oc>2</oc></ct><od title="dehydration">30u</od><cb><ef>0.5u/s<br>-0.50 heat<br>-0.50 shock<br>-0.50 cold</ef><re>silicon<br>carbon</re></cb></ch>
-<ch w style="background:#0041a8"><ct><n>Dexalin     </n><oc>3</oc></ct><od title="+3.00 asphyx; +1.00 cold">20u</od><cb><ef>0.5u/s<br>-1.00 asphyxiation<br>-0.50 bloodloss</ef><re>oxygen(2)<br><pl title=catalyst /></re></cb></ch>
-<ch b style="background:#4cb580"><ct><n>Hyronalin   </n><oc>2</oc></ct><od title="+2.00 heat; jittering">30u</od><cb><ef>0.5u/s<br>-1.00 radiation<br>2% vomiting</ef><re>radium<br>dylovene</re></cb></ch>
+<ch b style="background:#731024"><ct><n>Inaprovaline</n><oc>3</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.1u/s<br>-2.00 asphyxiation when critical<br>reduces bleeding</ef><re>oxygen<br>carbon<br>sugar</re></cb></ch>
+<ch b style="background:#bf3d19"><ct><n>Kelotane    </n><oc>2</oc></ct><cf><att></att><ods><od title="dehydration">30u</od></ods></cf><cb><ef>0.5u/s<br>-0.50 heat<br>-0.50 shock<br>-0.50 cold</ef><re>silicon<br>carbon</re></cb></ch>
+<ch w style="background:#0041a8"><ct><n>Dexalin     </n><oc>3</oc></ct><cf><att></att><ods><od title="+3.00 asphyx; +1.00 cold">20u</od></ods></cf><cb><ef>0.5u/s<br>-1.00 asphyxiation<br>-0.50 bloodloss</ef><re>oxygen(2)<br><pl title=catalyst /></re></cb></ch>
+<ch b style="background:#4cb580"><ct><n>Hyronalin   </n><oc>2</oc></ct><cf><att></att><ods><od title="+2.00 heat; jittering">30u</od></ods></cf><cb><ef>0.5u/s<br>-1.00 radiation<br>2% vomiting</ef><re>radium<br>dylovene</re></cb></ch>
 </cr><h3>Core Medications</h3><cr>
-<ch b style="background:#ffaa00"><ct><n>Bicaridine </n><oc>2</oc></ct><od title="+0.50 asphyxiation; +1.50 poison">15u</od><cb><ef>0.5u/s<br>-0.83 blunt<br>-0.83 slash<br>-0.84 piercing</ef><re>inaprovaline<br>carbon</re></cb></ch>
-<ch w style="background:#215263"><ct><n>Dermaline  </n><oc>3</oc></ct><od title="+1.00 asphyxiation; +2.00 cold; +0.16 blunt; +0.17 slash; +0.17 piercing">10u</od><cb><ef>0.5u/s<br>-2.00 heat<br>-2.00 shock<br>-2.00 cold</ef><re>kelotane<br>oxygen<br>phosphorus</re></cb></ch>
-<ch w style="background:#3a1d8a"><ct><n>Dylovene   </n><oc>3</oc></ct><od title="drunkness">15u</od><od title="+0.66 blunt; +0.67 slash; +0.67 piercing; jittering; 2% vomiting">20u</od><cb><ef>0.5u/s<br>-1.50 poison</ef><re>silicon<br>nitrogen<br>potassium</re></cb></ch>
-<ch b style="background:#4da0bd"><ct><n>Dexalin+   </n><oc>3</oc></ct><od title="+5.00 asphyx; +3.00 cold">25u</od><cb><ef>0.5u/s<br>-3.50 asphyxiation<br>-3.00 bloodloss</ef><re>dexalin<br>carbon<br>iron</re></cb></ch>
-<ch b style="background:#bd5902"><ct><n>Arithrazine</n><oc>2</oc></ct><od>no</od><cb><ef>0.5u/s<br>-3.00 radiation<br>+0.16 blunt<br>+0.17 slash<br>+0.17 piercing</ef><re>hyronalin<br>hydrogen</re></cb></ch>
-<ch w style="background:#0064C8"><ct><n>Saline     </n><oc>5</oc></ct><od>no</od><cb><ef>0.5u/s<br>sates thirst at 2&times; the normal rate<br>increases blood level</ef><re>water(4)<br>table salt(1)</re></cb></ch>
+<ch b style="background:#ffaa00"><ct><n>Bicaridine </n><oc>2</oc></ct><cf><att></att><ods><od title="+0.50 asphyxiation; +1.50 poison">15u</od></ods></cf><cb><ef>0.5u/s<br>-0.83 blunt<br>-0.83 slash<br>-0.84 piercing</ef><re>inaprovaline<br>carbon</re></cb></ch>
+<ch w style="background:#215263"><ct><n>Dermaline  </n><oc>3</oc></ct><cf><att></att><ods><od title="+1.00 asphyxiation; +2.00 cold; +0.16 blunt; +0.17 slash; +0.17 piercing">10u</od></ods></cf><cb><ef>0.5u/s<br>-2.00 heat<br>-2.00 shock<br>-2.00 cold</ef><re>kelotane<br>oxygen<br>phosphorus</re></cb></ch>
+<ch w style="background:#3a1d8a"><ct><n>Dylovene   </n><oc>3</oc></ct><cf><att></att><ods><od title="drunkness">15u</od><od title="+0.66 blunt; +0.67 slash; +0.67 piercing; jittering; 2% vomiting">20u</od></ods></cf><cb><ef>0.5u/s<br>-1.50 poison</ef><re>silicon<br>nitrogen<br>potassium</re></cb></ch>
+<ch b style="background:#4da0bd"><ct><n>Dexalin+   </n><oc>3</oc></ct><cf><att></att><ods><od title="+5.00 asphyx; +3.00 cold">25u</od></ods></cf><cb><ef>0.5u/s<br>-3.50 asphyxiation<br>-3.00 bloodloss</ef><re>dexalin<br>carbon<br>iron</re></cb></ch>
+<ch b style="background:#bd5902"><ct><n>Arithrazine</n><oc>2</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-3.00 radiation<br>+0.16 blunt<br>+0.17 slash<br>+0.17 piercing</ef><re>hyronalin<br>hydrogen</re></cb></ch>
+<ch w style="background:#0064C8"><ct><n>Saline     </n><oc>5</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>sates thirst at 2&times; the normal rate<br>increases blood level</ef><re>water(4)<br>table salt(1)</re></cb></ch>
 </cr><h3>Brute Damage Medications</h3><cr>
-<ch b style="background:#ff3636"><ct><n>Bruizine  </n><oc>2</oc></ct><od title="+4.00 poison">10.5u</od><cb><ef>0.5u/s<br>-4.00 blunt</ef><re>bicaridine(1)<br>sugar(1)<br>lithium(0.9)</re></cb></ch>
-<ch w style="background:#283332"><ct><n>Lacerinol </n><oc>2</oc></ct><od title="+3.00 cold"  >  12u</od><cb><ef>0.5u/s<br>-4.00 slash</ef><re>bicaridine<br>benzene<br><k title=heat>335</abbr></re></cb></ch>
-<ch b style="background:#b9bf93"><ct><n>Puncturase</n><oc>2</oc></ct><od title="+5.00 blunt" >  11u</od><cb><ef>0.5u/s<br>-4.00 piercing<br>+0.10 blunt</ef><re>bicaridine<br>hydroxide<br><k title=heat>325</abbr></re></cb></ch>
+<ch b style="background:#ff3636"><ct><n>Bruizine  </n><oc>2</oc></ct><cf><att></att><ods><od title="+4.00 poison">10.5u</od></ods></cf><cb><ef>0.5u/s<br>-4.00 blunt</ef><re>bicaridine(1)<br>sugar(1)<br>lithium(0.9)</re></cb></ch>
+<ch w style="background:#283332"><ct><n>Lacerinol </n><oc>2</oc></ct><cf><att></att><ods><od title="+3.00 cold"  >  12u</od></ods></cf><cb><ef>0.5u/s<br>-4.00 slash</ef><re>bicaridine<br>benzene<br><k title=heat>335</abbr></re></cb></ch>
+<ch b style="background:#b9bf93"><ct><n>Puncturase</n><oc>2</oc></ct><cf><att></att><ods><od title="+5.00 blunt" >  11u</od></ods></cf><cb><ef>0.5u/s<br>-4.00 piercing<br>+0.10 blunt</ef><re>bicaridine<br>hydroxide<br><k title=heat>325</abbr></re></cb></ch>
 </cr><h3>Other Specific Medications</h3><cr>
-<ch b style="background:#ff7db5"><ct><n>Leporazine</n><oc>2</oc></ct><od>no</od><cb>          <ef>0.5u/s<br>-4.00 Cold<br>+100kJ until 293.15K<br>- 10kJ until 293.15K<br>-5u fresium</ef><re>copper<br>fersilicite<br><pl title=catalyst /></re></cb></ch>
-<ch b style="background:#8147ff"><ct><n>Insuzine  </n><oc>3</oc></ct><od title="+2.00 cold; -30kJ; jittering">12u</od><cb><ef>0.5u/s<br>-4.00 shock<br>-4u licoxide<br>-4u tazinide<br>-5kJ<br></ef><re>leporazine<br>kelotane<br>silicon<br><k title=heat>433</k></re></cb></ch>
-<ch b style="background:#aa4308"><ct><n>Pyrazine  </n><oc>3</oc></ct><od title="10% vomiting">15u</od><od title="+0.50 slash; +0.50 piercing">20u</od><cb><ef>0.1u/s<br>suppress pain<br>-1.00 heat</ef><re>leporazine<br>dermaline<br>carbon<br><k title=heat>540</k></re></cb></ch>
-<ch b style="background:#e0a5b9"><ct><n>Sigynate  </n><oc>4</oc></ct><od title="+2.00 heat">16u</od><od title="jittering">20u</od><od title="2% vomiting">30u</od><cb><ef>0.5u/s<br>-3.00 caustic<br>CONTRA 1u arithrazine 10% vomiting</ef><re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><k title=heat>370</k></re></cb></ch>
+<ch b style="background:#ff7db5"><ct><n>Leporazine</n><oc>2</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb>          <ef>0.5u/s<br>-4.00 Cold<br>+100kJ until 293.15K<br>- 10kJ until 293.15K<br>-5u fresium</ef><re>copper<br>fersilicite<br><pl title=catalyst /></re></cb></ch>
+<ch b style="background:#8147ff"><ct><n>Insuzine  </n><oc>3</oc></ct><cf><att></att><ods><od title="+2.00 cold; -30kJ; jittering">12u</od></ods></cf><cb><ef>0.5u/s<br>-4.00 shock<br>-4u licoxide<br>-4u tazinide<br>-5kJ<br></ef><re>leporazine<br>kelotane<br>silicon<br><k title=heat>433</k></re></cb></ch>
+<ch b style="background:#aa4308"><ct><n>Pyrazine  </n><oc>3</oc></ct><cf><att></att><ods><od title="10% vomiting">15u</od><od title="+0.50 slash; +0.50 piercing">20u</od></ods></cf><cb><ef>0.1u/s<br>suppress pain<br>-1.00 heat</ef><re>leporazine<br>dermaline<br>carbon<br><k title=heat>540</k></re></cb></ch>
+<ch b style="background:#e0a5b9"><ct><n>Sigynate  </n><oc>4</oc></ct><cf><att></att><ods><od title="+2.00 heat">16u</od><od title="jittering">20u</od><od title="2% vomiting">30u</od></ods></cf><cb><ef>0.5u/s<br>-3.00 caustic<br>CONTRA 1u arithrazine 10% vomiting</ef><re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><k title=heat>370</k></re></cb></ch>
 </cr><h3>Cryogenic Medications</h3><cr>
-<ch b style="background:#0091ff"><ct><n>Cryoxadone    </n><oc>3</oc></ct><od>no</od><cb><ef>0.5u/s<br>cryogenic</ef><re>dexalin<br>water<br>oxygen</re></cb></ch>
-<ch b style="background:#89f77f"><ct><n>Aloxadone     </n><oc>4</oc></ct><od>no</od><cb><ef>0.5u/s<br>cryogenic</ef><re>cryoxadone(2)<br>leporazine(2)<br>aloe(1)</re></cb></ch>
-<ch b style="background:#32cd32"><ct><n>Doxarubixadone</n><oc>2</oc></ct><od>no</od><cb><ef>0.5u/s<br>cryogenic</ef><re>cryoxadone<br>unstable mutagen</re></cb></ch>
-<ch b style="background:#b5e36d"><ct><n>Opporozidone  </n><oc>3</oc></ct><od>no</od><cb><ef>0.5u/s<br>cryogenic</ef><re>plasma(2)<br>cognizine(1)<br>doxarubixadone(1)<br><k title=heat>400</abbr></re></cb></ch>
-<ch b style="background:#86a5bd"><ct><n>Necrosol      </n><oc>2</oc></ct><od>no</od><cb><ef>0.5u/s<br>cryogenic</ef><re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><k title=heat>370</abbr></re></cb></ch>
+<ch b style="background:#0091ff"><ct><n>Cryoxadone    </n><oc>3</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>cryogenic</ef><re>dexalin<br>water<br>oxygen</re></cb></ch>
+<ch b style="background:#89f77f"><ct><n>Aloxadone     </n><oc>4</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>cryogenic</ef><re>cryoxadone(2)<br>leporazine(2)<br>aloe(1)</re></cb></ch>
+<ch b style="background:#32cd32"><ct><n>Doxarubixadone</n><oc>2</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>cryogenic</ef><re>cryoxadone<br>unstable mutagen</re></cb></ch>
+<ch b style="background:#b5e36d"><ct><n>Opporozidone  </n><oc>3</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>cryogenic</ef><re>plasma(2)<br>cognizine(1)<br>doxarubixadone(1)<br><k title=heat>400</abbr></re></cb></ch>
+<ch b style="background:#86a5bd"><ct><n>Necrosol      </n><oc>2</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>cryogenic</ef><re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><k title=heat>370</abbr></re></cb></ch>
 </cr><h3>Misc. Medications</h3><cr>
-<ch w style="background:#404040"><ct><n>Oculine  </n><oc>4</oc></ct><od>no</od><cb><ef>0.5u/s<br>heals eyes</ef><re>hydroxide(2)<br>table salt(1)<br>blood(1)</re></cb></ch>
-<ch b style="background:#b50ee8"><ct><n>Cognizine</n><oc>1</oc></ct><od>no</od><cb><ef>0.5u/s<br>5u grants sentience</ef><re>carpotoxin<br>siderlac<br>acetone</re></cb></ch>
+<ch w style="background:#404040"><ct><n>Oculine  </n><oc>4</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>heals eyes</ef><re>hydroxide(2)<br>table salt(1)<br>blood(1)</re></cb></ch>
+<ch b style="background:#b50ee8"><ct><n>Cognizine</n><oc>1</oc></ct><cf><att></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>5u grants sentience</ef><re>carpotoxin<br>siderlac<br>acetone</re></cb></ch>
 </cr><h3>Botany</h3><cr>
-<ch b style="background:#00ff5f"><ct><n>Unstable Mutagen</n><oc>3</oc></ct><od></od><cb><ef>0.5u/s<br>+3.00 radiation</ef><re>radium<br>phosphorus<br>chlorine</re></cb></ch>
-<ch b style="background:#c8ff75"><ct><n>Phalanximine    </n><oc>3</oc></ct><od title="+0.20 radiation">11u</od><cb><ef>0.1u/s<br>-0.30 cellular<br>+0.15 radiation<br>+0.15 caustic<br>CONTRA 1u arithrazine +0.3 caustic</ef><re>hyronalin<br>ethanol<br>unstable mutagen</re></cb></ch>
+<ch b style="background:#00ff5f"><ct><n>Unstable Mutagen</n><oc>3</oc></ct><cf><att></att><ods><od></od></ods></cf><cb><ef>0.5u/s<br>+3.00 radiation</ef><re>radium<br>phosphorus<br>chlorine</re></cb></ch>
+<ch b style="background:#c8ff75"><ct><n>Phalanximine    </n><oc>3</oc></ct><cf><att></att><ods><od title="+0.20 radiation">11u</od></ods></cf><cb><ef>0.1u/s<br>-0.30 cellular<br>+0.15 radiation<br>+0.15 caustic<br>CONTRA 1u arithrazine +0.3 caustic</ef><re>hyronalin<br>ethanol<br>unstable mutagen</re></cb></ch>
 </cr><!--<cr>
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><od>no</od><cb><ef>asdf</ef><re>asdf</re></cb></ch>
 </cr>-->
