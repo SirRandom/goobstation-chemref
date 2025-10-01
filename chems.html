@@ -76,9 +76,15 @@ footer{position:absolute;bottom:0.5em;left:50%;transform:translate(-50%,0);opaci
 </cr><!--<cr>
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><cf><att><i>asdf</i></att><ods><od>no OD</od></ods></cf><cb><ef>asdf</ef><re>asdf</re></cb></ch>
 </cr>--><script>
+var q = false;
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
-	const c = n !== 'HTML' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'N' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS';
-	document.documentElement.style.cssText=("--mouse-x: " + (c?(e.pageX+5):0) + "px;--mouse-y: " + (c?(e.pageY+5):0) + "px");
-}, false);
+	if(n !== 'HTML' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'N' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
+		document.documentElement.style.cssText=(`--mouse-x:${e.pageX+5}px;--mouse-y:${e.pageY+5}px`);
+		q = false;
+	} else if(!q) {
+		document.documentElement.style.cssText=("--mouse-x:0px;--mouse-y:0px");
+		q = true;
+	}
+},false);
 </script><footer>ishchem by ishkab</footer></body></html>
