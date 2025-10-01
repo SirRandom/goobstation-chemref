@@ -12,7 +12,7 @@ cb{order:2;margin:0 3px;justify-content:space-between;font-family:monospace;}
 cf{order:3;justify-content:space-between;}
 att{order:1;}
 ods{order:2;margin:0 2px 0 0.75em;min-height:1em;}
-od{position:relative;margin-left:0.5em;}
+od{margin-left:0.5em;}
 /*od:not(:empty)::after{content:" OD";}*/
 n{order:1;padding-right:1em;}
 oc{order:2;flex-grow:0;}
@@ -74,5 +74,10 @@ footer{position:absolute;bottom:0.5em;left:50%;transform:translate(-50%,0);opaci
 <ch b style="background:#fcb8f5"><ct><n>Copium</n><oc>3</oc></ct><cf><att><i>comforting</i></att><ods><od>no OD</od></ods></cf><cb><ef></ef><re>water<br>sugar<br>table salt</re></cb></ch>
 </cr><!--<cr>
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><cf><att><i>asdf</i></att><ods><od>no OD</od></ods></cf><cb><ef>asdf</ef><re>asdf</re></cb></ch>
-</cr>-->
-<footer>ishchem by ishkab</footer></body></html>
+</cr>--><script>
+document.addEventListener('mousemove',e => {
+	const n = e.target.tagName;
+	const c = n !== 'HTML' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'N' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS';
+	document.documentElement.style.cssText=("--mouse-x: " + (c?(e.pageX+5):0) + "px;--mouse-y: " + (c?(e.pageY+5):0) + "px");
+}, false);
+</script><footer>ishchem by ishkab</footer></body></html>
