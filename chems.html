@@ -18,16 +18,17 @@ n{order:1;padding-right:1em;}
 oc{order:2;flex-grow:0;}
 oc::before{content:"("}
 oc::after{content:")"}
-ef{order:1;}
-re{order:2;text-align:right;padding:0 0 .75em 2em;}
-pl,h{text-decoration:underline;position:relative;}
+ef{order:1;text-align:left; padding:0 0 .5em 0;}
+re{order:2;text-align:right;padding:0 0 .5em 2em;}
+pl,h,c{text-decoration:underline;position:relative;}
 pl::before{content:"plasma";text-decoration:underline;}
-pl::after,h::after,od[d]::after{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:50%;top:110%;transform:translate(-50%,0);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;font-family:monospace;text-wrap:nowrap;background-color:#000;color:#fff;}
+c::after,pl::after,h::after,od[d]::after{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:50%;top:110%;transform:translate(-50%,0);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;font-family:monospace;text-wrap:nowrap;background-color:#000;color:#fff;}
 pl::after{content:"catalyst";}
 h::after{content:"heat mix";}
+c::after{content:"cool body";}
 od[d]{text-decoration:underline dotted;}
 od[d]::after{content:attr(d);}
-h:hover::after,pl:hover::after,od[d]:hover::after{visibility:visible;}
+c:hover::after,h:hover::after,pl:hover::after,od[d]:hover::after{visibility:visible;}
 [data-foo]::before{content:attr(data-foo) " ";}
 i{margin:0 3px;font-size:smaller;}
 </style></head><body><p data-foo="hello">world</p>
@@ -53,11 +54,11 @@ i{margin:0 3px;font-size:smaller;}
 <ch b style="background:#aa4308"><ct><n>Pyrazine  </n><oc>3</oc></ct><cf><att><i>thick</i></att><ods><od d="10% vomiting">15u</od><od d="+0.50 slash&#x0a;+0.50 piercing">20u</od></ods></cf><cb><ef>0.1u/s<br>suppress pain<br>-1.00 heat</ef><re>leporazine<br>dermaline<br>carbon<br><h>&gt;540K</h></re></cb></ch>
 <ch b style="background:#e0a5b9"><ct><n>Sigynate  </n><oc>4</oc></ct><cf><att><i>thick</i></att><ods><od d="+2.00 heat">16u</od><od d="jittering">20u</od><od d="2% vomiting">30u</od></ods></cf><cb><ef>0.5u/s<br>-3.00 caustic<br>CONTRA 1u arithrazine 10% vomiting</ef><re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><h>&gt;370K</h></re></cb></ch>
 </cr><h3>Cryogenic Medications</h3><cr>
-<ch b style="background:#0091ff"><ct><n>Cryoxadone    </n><oc>3</oc></ct><cf><att><i>fizzy</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&lt;213K</ef><re>dexalin<br>water<br>oxygen</re></cb></ch>
-<ch b style="background:#89f77f"><ct><n>Aloxadone     </n><oc>4</oc></ct><cf><att><i>soothing</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&lt;213K</ef><re>cryoxadone(2)<br>leporazine(2)<br>aloe(1)</re></cb></ch>
-<ch b style="background:#32cd32"><ct><n>Doxarubixadone</n><oc>2</oc></ct><cf><att><i>bubbling</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&lt;213K</ef><re>cryoxadone<br>unstable mutagen</re></cb></ch>
-<ch b style="background:#b5e36d"><ct><n>Opporozidone  </n><oc>3</oc></ct><cf><att><i>sickly</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&lt;150K<br>-20s rotting</ef><re>plasma(2)<br>cognizine(1)<br>doxarubixadone(1)<br><h>&gt;400K</h></re></cb></ch>
-<ch b style="background:#86a5bd"><ct><n>Necrosol      </n><oc>2</oc></ct><cf><att><i>necrotic</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&lt;213K</ef><re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><h>&gt;370K</h></re></cb></ch>
+<ch b style="background:#0091ff"><ct><n>Cryoxadone    </n><oc>3</oc></ct><cf><att><i>fizzy</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c></ef><re>dexalin<br>water<br>oxygen</re></cb></ch>
+<ch b style="background:#89f77f"><ct><n>Aloxadone     </n><oc>4</oc></ct><cf><att><i>soothing</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c></ef><re>cryoxadone(2)<br>leporazine(2)<br>aloe(1)</re></cb></ch>
+<ch b style="background:#32cd32"><ct><n>Doxarubixadone</n><oc>2</oc></ct><cf><att><i>bubbling</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c></ef><re>cryoxadone<br>unstable mutagen</re></cb></ch>
+<ch b style="background:#b5e36d"><ct><n>Opporozidone  </n><oc>3</oc></ct><cf><att><i>sickly</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;150K</c><br>-20s rotting</ef><re>plasma(2)<br>cognizine(1)<br>doxarubixadone(1)<br><h>&gt;400K</h></re></cb></ch>
+<ch b style="background:#86a5bd"><ct><n>Necrosol      </n><oc>2</oc></ct><cf><att><i>necrotic</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c></ef><re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><h>&gt;370K</h></re></cb></ch>
 </cr><h3>Misc. Medications</h3><cr>
 <ch w style="background:#404040"><ct><n>Oculine  </n><oc>4</oc></ct><cf><att><i>translucent</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>heals eyes</ef><re>hydroxide(2)<br>table salt(1)<br>blood(1)</re></cb></ch>
 <ch b style="background:#b50ee8"><ct><n>Cognizine</n><oc>1</oc></ct><cf><att><i>enigmatic</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>5u grants sentience</ef><re>carpotoxin<br>siderlac<br>acetone</re></cb></ch>
