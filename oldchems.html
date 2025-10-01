@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>ishchem</title>
+<style>
+body{
+background:#000;
+font-size:small;
+}
+.top{
+display:flex;
+flex-wrap:wrap;
+}
+h1{
+width:100%;
+color:#fff;
+font-size:large;
+}
+.ch{ /* top level chem container */
+position:relative;
+margin:4px;
+}
+.e{min-width:100px;}
+.x{min-width:120px;}
+.c{min-width:130px;}
+.s{min-width:160px;}
+.m{min-width:200px;}
+.g{min-width:240px;}
+.v{height:4.5em;}
+.h{height:8em;}
+.a{height:10em;}
+.l{color:#000;}
+.d{color:#fff;}
+.t{ /* row title */
+min-width:120px;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:4px;
+}
+.tb{ /* chem title bar */
+display:flex;
+flex-direction:row;
+background:#000;
+color:#fff;
+margin:2px;
+padding-left:4px;
+padding-right:4px;
+}
+.n{ /* chem name */
+flex-grow:1;
+}
+.ef{ /* effects */
+font-family:monospace;
+font-size:smaller;
+text-align:left;
+padding-left:4px;
+}
+.oc{ /* output count */
+flex-grow:0;
+color:#fff;
+}
+.re{ /* recipe */
+position:absolute;
+font-size:smaller;
+text-align:right;
+top:2em;
+right:0px;
+padding-right:4px;
+}
+.re>abbr{text-decoration:underline;}
+.od{ /* overdose information */
+position:absolute;
+right:0px;
+bottom:0px;
+padding-right:4px;
+padding-bottom:1px;
+}
+.sep{ /* separator */
+min-width:100%;
+flex-shrink:0;
+}
+.ef>hr{
+max-width:80px;
+margin-left:0;
+}
+</style>
+</head>
+<body>
+<div class=top><div class=t>Elemental<br>Reagents</div>
+<div class="ch e v d" style="background:#434b4d"><div class=tb><div class=n>Iron               </div>                       </div></div>
+<div class="ch e v d" style="background:#a76b1c"><div class=tb><div class=n>Welding Fuel       </div>                       </div></div>
+<div class=sep></div><div class=t>Misc.<br>Reagents</div>
+<div class="ch x h l" style="background:#ffffff"><div class=tb><div class=n>Hydroxide          </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>oxygen<br>hydrogen<br><abbr title=heat>>310K</abbr></div></div>
+<div class="ch x h l" style="background:#e7ea91"><div class=tb><div class=n>Benzene            </div><div class=oc>(1)</div></div>                                                <div class=ef>asdf</div><div class=re>hydrogen<br>carbon<br><abbr title=heat>>310K</abbr></div></div>
+<div class="ch x h l" style="background:#e7ea91"><div class=tb><div class=n>Phenol             </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>hydroxide<br>benzene</div></div>
+<div class="ch x h l" style="background:#cfd1d0"><div class=tb><div class=n>Table Salt         </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>chlorine<br>sodium<br><abbr title=heat>>370K</abbr></div></div>
+<div class="ch x h l" style="background:#b67823"><div class=tb><div class=n>Oil                </div><div class=oc>(3)</div></div>                                                <div class=ef>asdf</div><div class=re>welding fuel<br>hydrogen<br>carbon</div></div>
+<div class=sep></div><div class=t></div>
+<div class="ch s h l" style="background:#a1000b"><div class=tb><div class=n>Diethylamine       </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>ammonia<br>ethanol</div></div>
+<div class="ch s h l" style="background:#bf8c00"><div class=tb><div class=n>Sulfuric Acid      </div><div class=oc>(3)</div></div>                                                <div class=ef>asdf</div><div class=re>oxygen(2)<br>hydrogen<br>sulfur</div></div>
+<div class="ch s h l" style="background:#a1000b"><div class=tb><div class=n>Polytrinic Acid    </div><div class=oc>(3)</div></div>                                                <div class=ef>asdf</div><div class=re>sulfuric acid<br>plasma<br>potassium</div></div>
+<div class="ch s h l" style="background:#5050ff"><div class=tb><div class=n>Fluorosulfuric Acid</div><div class=oc>(4)</div></div>                                                <div class=ef>asdf</div><div class=re>fluorine<br>hydrogen<br>potassium<br>sulfuric acid</div></div>
+<div class=sep></div><div class=t>Precursors</div>
+<div class="ch s h d" style="background:#731024"><div class=tb><div class=n>Inaprovaline       </div><div class=oc>(3)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>oxygen<br>carbon<br>sugar</div></div>
+<div class="ch s h l" style="background:#bf3d19"><div class=tb><div class=n>Kelotane           </div><div class=oc>(2)</div></div><abbr class=od title="         ">  30u OD</abbr><div class=ef>asdf</div><div class=re>silicon<br>carbon</div></div>
+<div class="ch s h d" style="background:#0041a8"><div class=tb><div class=n>Dexalin            </div><div class=oc>(3)</div></div><abbr class=od title="         ">  20u OD</abbr><div class=ef>asdf</div><div class=re>oxygen(2)<br><abbr title=catalyst>plasma</abbr></div></div>
+<div class="ch s h l" style="background:#4cb580"><div class=tb><div class=n>Hyronalin          </div><div class=oc>(2)</div></div><abbr class=od title="         ">  30u OD</abbr><div class=ef>asdf</div><div class=re>radium<br>dylovene</div></div>
+<div class=sep></div><div class=t>Basic<br>Medicines</div>
+<div class="ch s h l" style="background:#ffaa00"><div class=tb><div class=n>Bicaridine         </div><div class=oc>(2)</div></div><abbr class=od title="         ">  15u OD</abbr><div class=ef>asdf</div><div class=re>inaprovaline<br>carbon</div></div>
+<div class="ch s h d" style="background:#215263"><div class=tb><div class=n>Dermaline          </div><div class=oc>(3)</div></div><abbr class=od title="         ">  10u OD</abbr><div class=ef>asdf</div><div class=re>kelotane<br>oxygen<br>phosphorus</div></div>
+<div class="ch s h d" style="background:#3a1d8a"><div class=tb><div class=n>Dylovene           </div><div class=oc>(3)</div></div><abbr class=od title="         ">  20u OD</abbr><div class=ef>asdf</div><div class=re>silicon<br>nitrogen<br>potassium</div></div>
+<div class="ch s h l" style="background:#4da0bd"><div class=tb><div class=n>Dexalin+           </div><div class=oc>(3)</div></div><abbr class=od title="         ">  25u OD</abbr><div class=ef>asdf</div><div class=re>dexalin<br>carbon<br>iron</div></div>
+<div class="ch s h l" style="background:#bd5902"><div class=tb><div class=n>Arithrazine        </div><div class=oc>(2)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>hyronalin<br>hydrogen</div></div>
+<div class="ch s h d" style="background:#0064C8"><div class=tb><div class=n>Saline             </div><div class=oc>(5)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>water(4)<br>table salt(1)</div></div>
+<div class=sep></div><div class=t>Specific<br>Brute<br>Medicines</div>
+<div class="ch s h l" style="background:#ff3636"><div class=tb><div class=n>Bruizine           </div><div class=oc>(2)</div></div><abbr class=od title="         ">10.5u OD</abbr><div class=ef>asdf</div><div class=re>bicaridine(1)<br>sugar(1)<br>lithium(0.9)</div></div>
+<div class="ch s h d" style="background:#283332"><div class=tb><div class=n>Lacerinol          </div><div class=oc>(2)</div></div><abbr class=od title="         ">  12u OD</abbr><div class=ef>asdf</div><div class=re>bicaridine<br>benzene<br><abbr title=heat>>335K</abbr></div></div>
+<div class="ch s h l" style="background:#b9bf93"><div class=tb><div class=n>Puncturase         </div><div class=oc>(2)</div></div><abbr class=od title="         ">  11u OD</abbr><div class=ef>asdf</div><div class=re>bicaridine<br>hydroxide<br><abbr title=heat>>325K</abbr></div></div>
+<div class=sep></div><div class=t>Other<br>Specific<br>Medicines</div>
+<div class="ch s a l" style="background:#ff7db5"><div class=tb><div class=n>Leporazine         </div><div class=oc>(2)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>copper<br>fersilicite<br><abbr title=catalyst>plasma</abbr></div></div>
+<div class="ch s a l" style="background:#8147ff"><div class=tb><div class=n>Insuzine           </div><div class=oc>(3)</div></div><abbr class=od title="         ">  12u OD</abbr><div class=ef>asdf</div><div class=re>leporazine<br>kelotane<br>silicon<br><abbr title=heat>>433K</abbr></div></div>
+<div class="ch s a l" style="background:#aa4308"><div class=tb><div class=n>Pyrazine           </div><div class=oc>(3)</div></div><abbr class=od title="         ">  20u OD</abbr><div class=ef>asdf</div><div class=re>leporazine<br>dermaline<br>carbon<br><abbr title=heat>>540K</abbr></div></div>
+<div class="ch s a l" style="background:#e0a5b9"><div class=tb><div class=n>Sigynate           </div><div class=oc>(4)</div></div><abbr class=od title="         ">  16u OD</abbr><div class=ef>asdf</div><div class=re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><abbr title=heat>>370K</abbr></div></div>
+<div class=sep></div><div class=t></div>
+<div class="ch m a l" style="background:#64ffe6"><div class=tb><div class=n>Diphenhydramine    </div><div class=oc>(3)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>diethylamine<br>oil<br>table salt<br>carbon<br>ethanol<br><abbr title=heat>>377.59K</abbr></div></div>
+<div class="ch m a l" style="background:#ba7d7d"><div class=tb><div class=n>Tranexamic Acid    </div><div class=oc>(3)</div></div><abbr class=od title="         ">  15u OD</abbr><div class=ef>asdf</div><div class=re>inaprovaline<br>sulfuric acid<br>sugar</div></div>
+<div class="ch m a l" style="background:#22ff1a"><div class=tb><div class=n>Pentenic Acid      </div><div class=oc>(4)</div></div><div  class=od title="         ">   no OD</div ><div class=ef>asdf</div><div class=re>polytrinic acid<br>potassium iodide<br>haloperidol<br>cyanide</div></div>
+<div class="ch m a l" style="background:#e8cb4e"><div class=tb><div class=n>Salicylic Acid     </div><div class=oc>(4)</div></div><abbr class=od title="         ">  25u OD</abbr><div class=ef>asdf</div><div class=re>tranexamic acid<br>fluorosulfuric acid<br>sodium hydroxide<br>bicaridine<br><abbr title=heat>>370K</abbr></div></div>
+<div class=sep></div><div class=t>Cryogenic<br>Medications</div>
+<div class="ch m h l" style="background:#0091ff"><div class=tb><div class=n>Cryoxadone         </div><div class=oc>(3)</div></div>                                                <div class=ef>asdf</div><div class=re>dexalin<br>water<br>oxygen</div></div>
+<div class="ch m h l" style="background:#89f77f"><div class=tb><div class=n>Aloxadone          </div><div class=oc>(4)</div></div>                                                <div class=ef>asdf</div><div class=re>cryoxadone(2)<br>leporazine(2)<br>aloe(1)</div></div>
+<div class="ch m h l" style="background:#32cd32"><div class=tb><div class=n>Doxarubixadone     </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>cryoxadone<br>unstable mutagen</div></div>
+<div class="ch m h l" style="background:#b5e36d"><div class=tb><div class=n>Opporozidone       </div><div class=oc>(3)</div></div>                                                <div class=ef>asdf</div><div class=re>plasma(2)<br>cognizine(1)<br>doxarubixadone(1)<br><abbr title=heat>>400K</abbr></div></div>
+<div class="ch m h l" style="background:#86a5bd"><div class=tb><div class=n>Necrosol           </div><div class=oc>(2)</div></div>                                                <div class=ef>asdf</div><div class=re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><abbr title=heat>>370K</abbr></div></div>
+<div class=sep></div><div class=t>Other</div>
+<div class="ch s h d" style="background:#22282b"><div class=tb><div class=n>Charcoal           </div><div class=oc>(1)</div></div><div  class=od                  >   no OD</div ><div class=ef>asdf</div><div class=re>carbon<br>ash</div></div>
+<div class="ch s h l" style="background:#baa15d"><div class=tb><div class=n>Potassium Iodide   </div><div class=oc>(2)</div></div><abbr class=od title="         ">  20u OD</abbr><div class=ef>asdf</div><div class=re>potassium<br>iodine</div></div>
+<div class="ch s h l" style="background:#be5c5c"><div class=tb><div class=n>Ibuprofen          </div><div class=oc>(3)</div></div><abbr class=od title="+0.20 poi">  20u OD</abbr><div class=ef>asdf</div><div class=re>charcoal<br>benzene<br>fluorine</div></div>
+<div class="ch s h d" style="background:#404040"><div class=tb><div class=n>Oculine            </div><div class=oc>(4)</div></div><div  class=od                  >   no OD</div ><div class=ef>0.5u/s<br>heals eyes</div><div class=re>hydroxide(2)<br>table salt(1)<br>blood(1)</div></div>
+<div class="ch c h l" style="background:#b50ee8"><div class=tb><div class=n>Cognizine          </div><div class=oc>(1)</div></div><div  class=od                  >   no OD</div ><div class=ef>0.5u/s<br>5u grants<br>sentience</div><div class=re>carpotoxin<br>siderlac<br>acetone</div></div>
+<div class="ch e h l" style="background:#fcb8f5"><div class=tb><div class=n>Copium             </div><div class=oc>(3)</div></div><div  class=od                  >   no OD</div ><div class=re>water<br>sugar<br>table salt</div></div>
+<div class=sep></div><div class=t>Botany</div>
+<div class="ch s h l" style="background:#00ff5f"><div class=tb><div class=n>Unstable Mutagen   </div><div class=oc>(3)</div></div>                                                <div class=re>radium<br>phosphorus<br>chlorine</div></div>
+<div class="ch g h l" style="background:#c8ff75"><div class=tb><div class=n>Phalanximine       </div><div class=oc>(3)</div></div><abbr class=od title="+0.20 rad">  11u OD</abbr><div class=ef>0.1u/s<br>-0.30 cel<br>+0.15 rad<br>+0.15 cau<br><br>CONTRA 1u arithrazine +0.3 cau</div><div class=re>hyronalin<br>ethanol<br>unstable mutagen</div></div>
+</div>
+</body>
+</html>
+
+
