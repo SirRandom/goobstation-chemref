@@ -2,19 +2,27 @@
 body,ch{display:flex;flex-direction:column;}
 body{background:#000;color:#fff;font-size:small;}
 cr,ct,cb,cf{display:flex;flex-direction:row;}
-ch{justify-content:space-between;margin:4px;}ch[w]{color:#fff;}ch[b]{color:#000;}
+ch{justify-content:space-between;margin:4px;}
+ch[w]{color:#fff;}
+ch[b]{color:#000;}
 ct,cf,od{flex-grow:0;}
 cb,n{flex-grow:1;}
 ct{order:1;margin:2px;padding:1px 2px;background:#000;color:#fff;}
 cb{order:2;margin:0 3px;justify-content:space-between;font-family:monospace;}
 cf{order:3;}
-od{order:3;align-self:flex-end;margin:0 2px;min-height:1em;}od:not(:empty)::after{content:" OD";}od[title]{text-decoration:underline dotted;}
+od{order:3;align-self:flex-end;margin:0 2px;min-height:1em;}
+od:not(:empty)::after{content:" OD";}
+od[title]{text-decoration:underline dotted;}
 n{order:1;padding-right:1em;}
-oc::before{content:"("}oc{order:2;flex-grow:0;}oc::after{content:")"}
+oc{order:2;flex-grow:0;}
+oc::before{content:"("}
+oc::after{content:")"}
 ef{order:1;}
 re{order:2;text-align:right;padding:0 0 .75em 2em;}
 pl::after{content:"plasma";text-decoration:underline;}
-k::before{content:">";}k{text-decoration:underline;}k::after{content:"K";}
+k{text-decoration:underline;}
+k::before{content:">";}
+k::after{content:"K";}
 </style></head><body>
 <h3>Precursor Medications</h3><cr>
 <ch b style="background:#731024"><ct><n>Inaprovaline</n><oc>3</oc></ct><od         > no</od><cb><ef>0.1u/s<br>-2.00 asphyxiation when critical<br>reduces bleeding</ef><re>oxygen<br>carbon<br>sugar</re></cb></ch>
