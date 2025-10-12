@@ -119,7 +119,7 @@ footer{position:fixed;bottom:0.5em;left:50%;transform:translate(-50%,0);opacity:
 var q = false;
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
-	if(n !== 'HTML' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'N' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
+	if(n !== 'HTML' && n !== 'BODY' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'N' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
 		document.documentElement.style.cssText=(`--mouse-x:${e.pageX+5}px;--mouse-y:${e.pageY+5}px`);
 		q = false;
 	} else if(!q) {
