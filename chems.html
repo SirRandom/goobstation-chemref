@@ -28,7 +28,7 @@ re{order:2;text-align:right;padding:0 0 .35em 1.7em;}
 pl,h,c,g,od[d][r],s[d],ci[d]{text-decoration:underline;}
 pl::before{content:"plasma";text-decoration:underline;}
 c::after,n::after,pl::after,h::after,g::after,od[d]::after,s[d]::after,ci[d]::after{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;font-family:monospace;text-wrap:nowrap;background-color:#000;color:#fff;}
-n::after{content:"copy label?";color:red;border-color:red;}
+n::after{content:attr(d) "\00000acopy label?";color:red;border-color:red;}
 pl::after{content:"catalyst";}
 g::after{content:"grind";}
 h::after{content:"heat mix";}
@@ -120,8 +120,11 @@ footer{position:fixed;bottom:0.5em;left:50%;transform:translate(-50%,0);opacity:
 </cr><script>
 const chems = {"Inaprovaline":"inaprov/asphyx & bleeding/no OD","Kelotane":"kelotane/burns/30u OD","Dexalin":"dexalin/asphyx & bloodloss/20u OD","Hyronalin":"hyronalin/rads/vomiting/30u OD","Charcoal":null,"Bicaridine":"bicaridine/brute/15u OD","Dermaline":"dermaline/burns/10u OD","Dylovene":"dylovene/poison/15u OD","Dexalin+":"dexalin+/asphyx & bloodloss/25u OD","Arithrazine":"arithrazine/rads/does brute/no OD","Saline":"saline/bloodlevel/no OD","Bruizine":"bruizine/blunt/10.5u OD","Lacerinol":"lacerinol/slash/12u OD","Puncturase":"puncturase/piercing/11u OD","Potassium Iodide":null,"Pyrazine":"pyrazine/heat/15u OD","Leporazine":"leporazine/cold/no OD","Insuzine":"insuzine/shock/12u OD","Pentenic Acid":"pentenic/rads & poison/no OD","Salicylic Acid":"salicylic/brute/25u OD","Tranexamic Acid":"tranexamic/bleeding/15u OD","Polytrinic Acid":null,"Fluorosulfuric Acid":null,"Sulfuric Acid":null,"Ipecac":"ipecac/vomiting/no OD","Cyanide":null,"Triclor":null,"Artiplates":"artiplates/bloodloss,bloodlevel,bleeds/11u OD","Ammonia":null,"Benzene":null,"Phenol":null,"Sodium Hydroxide":null,"Oil":null,"Hydroxide":null,"Fersilicite":null,"Acetone":null,"Cryoxadone":null,"Aloxadone":null,"Necrosol":null,"Cognizine":null,"Doxarubixadone":null,"Opporozidone":null,"Oculine":"oculine/eyes/no OD","Ibuprofen":"ibuprofen/painkiller/20u OD","Tramadol":null,"Stellibinin":null,"Aloe":null,"Table Salt":null,"Copium":null,"Siderlac":"siderlac/caustic/no OD","Space Mirage":null,"Sigynate":"sigynate/caustic/16u OD","Phalanximine":null,"Unstable Mutagen":null,"Diethylamine":null,"Silver Sulfadiazine":null,"Space Lube":null};
 var q = false;
-const forallevent=(e,f) => { Array.from(document.getElementsByTagName('n')).forEach(x => {x.addEventListener(e,f.bind(null,x.innerHTML))}); };
-forallevent('click',(k,e)=>{ navigator.clipboard.writeText(chems[k] ?? k.toLowerCase()); });
+Array.from(document.getElementsByTagName('n')).forEach(n => {
+	const k = n.innerHTML;
+	n.setAttribute('d', chems[k] ?? k.toLowerCase());
+	n.addEventListener('click', e => { navigator.clipboard.writeText(chems[k] ?? k.toLowerCase()); });
+});
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
 	if(n !== 'HTML' && n !== 'BODY' && n !== 'FOOTER' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
