@@ -127,7 +127,33 @@ footer{position:fixed;bottom:0.5em;left:50%;transform:translate(-50%,0);opacity:
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><cf><att><i>asdf</i></att><ods><od>no OD</od></ods></cf><cb><ef>asdf</ef><re>asdf</re></cb></ch>
 -->
 </cr><script>
-const chems = {"Inaprovaline":"inaprov/asphyx & bleeding/no OD","Kelotane":"kelotane/burns/30u OD","Dexalin":"dexalin/asphyx & bloodloss/20u OD","Hyronalin":"hyronalin/rads/vomiting/30u OD","Charcoal":null,"Bicaridine":"bicaridine/brute/15u OD","Dermaline":"dermaline/burns/10u OD","Dylovene":"dylovene/poison/15u OD","Dexalin+":"dexalin+/asphyx & bloodloss/25u OD","Arithrazine":"arithrazine/rads/does brute/no OD","Saline":"saline/bloodlevel/no OD","Bruizine":"bruizine/blunt/10.5u OD","Lacerinol":"lacerinol/slash/12u OD","Puncturase":"puncturase/piercing/11u OD","Potassium Iodide":null,"Pyrazine":"pyrazine/heat/15u OD","Leporazine":"leporazine/cold/no OD","Insuzine":"insuzine/shock/12u OD","Pentenic Acid":"pentenic/rads & poison/no OD","Salicylic Acid":"salicylic/brute/25u OD","Tranexamic Acid":"tranexamic/bleeding/15u OD","Polytrinic Acid":null,"Fluorosulfuric Acid":null,"Sulfuric Acid":null,"Ipecac":"ipecac/vomiting/no OD","Cyanide":null,"Triclor":null,"Artiplates":"artiplates/bloodloss,bloodlevel,bleeds/11u OD","Ammonia":null,"Benzene":null,"Phenol":null,"Sodium Hydroxide":null,"Oil":null,"Hydroxide":null,"Fersilicite":null,"Acetone":null,"Cryoxadone":null,"Aloxadone":null,"Necrosol":null,"Cognizine":null,"Doxarubixadone":null,"Opporozidone":null,"Oculine":"oculine/eyes/no OD","Ibuprofen":"ibuprofen/painkiller/20u OD","Tramadol":null,"Stellibinin":null,"Aloe":null,"Table Salt":null,"Copium":null,"Siderlac":"siderlac/caustic/no OD","Space Mirage":null,"Sigynate":"sigynate/caustic/16u OD","Phalanximine":null,"Unstable Mutagen":null,"Diethylamine":null,"Silver Sulfadiazine":null,"Space Lube":null};
+const chems = {
+	"Inaprovaline": "inaprov/asphyx & bleeding/no OD",
+	"Kelotane": "kelotane/burns/30u OD",
+	"Dexalin": "dexalin/asphyx & bloodloss/20u OD",
+	"Hyronalin": "hyronalin/rads/vomiting/30u OD",
+	"Bicaridine": "bicaridine/brute/15u OD",
+	"Dermaline": "dermaline/burns/10u OD",
+	"Dylovene": "dylovene/poison/15u OD",
+	"Dexalin+": "dexalin+/asphyx & bloodloss/25u OD",
+	"Arithrazine": "arithrazine/rads/does brute/no OD",
+	"Saline": "saline/bloodlevel/no OD",
+	"Bruizine": "bruizine/blunt/10.5u OD",
+	"Lacerinol": "lacerinol/slash/12u OD",
+	"Puncturase": "puncturase/piercing/11u OD",
+	"Pyrazine": "pyrazine/heat/15u OD",
+	"Leporazine": "leporazine/cold/no OD",
+	"Insuzine": "insuzine/shock/12u OD",
+	"Pentenic Acid": "pentenic/rads & poison/no OD",
+	"Salicylic Acid": "salicylic/brute/25u OD",
+	"Tranexamic Acid": "tranexamic/bleeding/15u OD",
+	"Ipecac": "ipecac/vomiting/no OD",
+	"Artiplates": "artiplates/bloodloss,bloodlevel,bleeds/11u OD",
+	"Oculine": "oculine/eyes/no OD",
+	"Ibuprofen": "ibuprofen/painkiller/20u OD",
+	"Siderlac": "siderlac/caustic/no OD",
+	"Sigynate": "sigynate/caustic/16u OD"
+};
 var q = false;
 Array.from(document.getElementsByTagName('n')).forEach(n => {
 	const k = n.innerHTML;
