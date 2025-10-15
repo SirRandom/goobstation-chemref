@@ -11,7 +11,9 @@ ch[b]{color:#000;}
 cc[g]>ch,cr[g]>ch,cb,n{flex-grow:1;}
 cc[l]{justify-content:flex-start;}
 ct{order:1;margin:2px;padding:1px 2px;background:#000;color:#fff;}
-cb{order:2;margin:0 3px;font-family:'Noto Sans Mono';font-size:10px;}
+cb{order:2;margin:0 3px;}
+cb,c::after,n::after,pl::after,al::after,bru::after,brn::after,tox::after,h::after,g::after,od[d]::after,s[d]::after,ci[d]::after
+{font-family:'Noto Sans Mono';font-size:10px;}
 cf{order:3;}
 att{order:1;}
 ods{order:2;margin:0 2px 0 0.75em;min-height:1em;}
@@ -43,7 +45,7 @@ bru::after{content:"brute:\00000a- blunt\00000a- slash\00000a- piercing";}
 brn::after{content:"burn:\00000a- heat\00000a- shock\00000a- cold\00000a- caustic";}
 tox::after{content:"toxin:\00000a- poison\00000a- radiation";}
 c::after,n::after,pl::after,al::after,bru::after,brn::after,tox::after,h::after,g::after,od[d]::after,s[d]::after,ci[d]::after
-{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;font-family:monospace;text-wrap:nowrap;background-color:#000;color:#fff;}
+{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;text-wrap:nowrap;background-color:#000;color:#fff;}
 c:hover::after,n:hover::after,h:hover::after,g:hover::after,pl:hover::after,al:hover::after,bru:hover::after,brn:hover::after,tox:hover::after,od[d]:hover::after,s[d]:hover::after,ci[d]:hover::after
 {visibility:visible;}
 i{margin:0 3px;font-size:smaller;}
