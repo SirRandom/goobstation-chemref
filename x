@@ -1,2 +1,2 @@
 cd ~/ss14/server/Resources/Prototypes
-cat Reagents/*.yml Reagents/Consumable/{Drink,Food}/*.yml Reagents/Materials/*.yml _Goobstation/Reagents/*.yml _Goobstation/Reagents/Materials/*.yml _EinsteinEngines/Reagents/*.yml | less
+cat Reagents/*.yml Reagents/Consumable/{Drink,Food}/*.yml Reagents/Materials/*.yml _Goobstation/Reagents/*.yml _Goobstation/Reagents/Materials/*.yml _EinsteinEngines/Reagents/*.yml _DV/Reagents/*.yml | less
