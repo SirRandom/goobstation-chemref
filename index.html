@@ -34,8 +34,8 @@ al::before{content:"airloss";}
 bru::before{content:"brute";}
 brn::before{content:"burn";}
 tox::before{content:"toxin";}
-oc::before{content:"("}
-oc::after{content:")"}
+oc:not(:empty)::before{content:"("}
+oc:not(:empty)::after{content:")"}
 pl::after{content:"catalyst";}
 g::after{content:"grind";}
 h::after{content:"heat mix";}
