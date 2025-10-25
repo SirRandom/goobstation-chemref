@@ -208,7 +208,7 @@ Array.from(document.getElementsByTagName('n')).forEach(n => {
 });
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
-	if(n !== 'HTML' && n !== 'BODY' && n !== 'FOOTER' && n !== 'EXTRA' && n !== 'NOTE' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
+	if(n !== 'HTML' && n !== 'BODY' && n !== 'A' && n !== 'FOOTER' && n !== 'EXTRA' && n !== 'NOTE' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
 		const xlat = (e.pageX / window.innerWidth) * (-100);
 		document.documentElement.style.cssText=(`--mouse-x:${e.pageX+6}px;--mouse-y:${e.pageY+8}px;--d-xlat:${xlat}%;`);
 		q = false;
