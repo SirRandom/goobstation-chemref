@@ -212,11 +212,14 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#fa00af"><ct><n>Napalm</n><oc>3</oc></ct><cf><att><i>soapy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+2.00 heat<br>+1.00 poison<br>+0.50 caustic<br>+flammability</ef><re>oil<br>welding fuel<br>ethanol</re></cb></ch>
 </cr></cc>
 </cr><cr>
+<ch b style="background:#6e697d"><ct><n>Fentanyl</n><oc>1</oc></ct><cf><att><i>murky</i></att><ods><od r d="+0.25 poison&#x0a;+0.75 asphyx&#x0a;5% +1.00 slash&#x0a;5% paralysis">5u</od></ods></cf><cb><ef>0.05u/s<br>+0.25 poison<br>suppress pain<br>80% speed<br>5% paralysis<br>stuttering<br>jittering<br>drunkness<br>hallu</ef><re>impedrezene(3)<br>desoxyephedrine(2)<br>14 Loko(1)<br>bleach(1)<br><h>410K&lt;T&lt;420K</h></re></cb></ch>
+<cc g>
 <ch b style="background:#07e79e"><ct><n>Psicodine</n><oc>4</oc></ct><cf><att><i>shiny</i></att><ods><od r d="+2.00 poison&#x0a;hallu">30u</od></ods></cf><cb><ef>0.5u/s<br>-jittering<br>-drunkenness</ef><re>mannitol(2)<br>water(2)<br>impedrezene(1)</re></cb></ch>
+<ch w style="background:#6e2828"><ct><n>Tirizene</n><oc>2</oc></ct><cf><att><i>syrupy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>-13.00 stamina</ef><re>phenol<br>haloperidol<br>plasma</re></cb></ch>
+</cc>
 <ch b style="background:#64ffe6"><ct><n>Diphenhydramine</n><oc>3</oc></ct><cf><att><i>chalky</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-3.00 poison<br>drowsiness<br>-jittering<br><s d="-3u histamine">removes</s></ef><re>diethylamine<br>oil<br>table salt<br>carbon<br>ethanol<br><h>&gt;377.59K</h></re></cb></ch>
 <ch b style="background:#ff6060"><ct><n>Tirimol</n><oc>4</oc></ct><cf><att><i>milky</i></att><ods><od r d="paralysis">15u</od></ods></cf><cb><ef>0.5u/s<br>-6.00 asphyx<br>-3.00 stamina<br>bleeding -0.25<br>75% speed</ef><re>acetone(2)<br>sodium polyacrylate(1)<br>sulfuric acid(1)</re></cb></ch>
 <ch b style="background:#22ff1a"><ct><n>Pendetide</n><oc>3</oc></ct><cf><att><i>viscous</i></att><ods></ods></cf><cb><ef>0.5u/s<br>&gt;=2.00 rads:<br>&nbsp;+2.00 rads<br>stuttering<br>jittering<br><s d="-5u medicines">removes</s></ef><re>potassium iodide<br>impedrezene<br>aluminium</re></cb></ch>
-<ch w style="background:#6e2828"><ct><n>Tirizene</n><oc>2</oc></ct><cf><att><i>syrupy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>-13.00 stamina</ef><re>phenol<br>haloperidol<br>plasma</re></cb></ch>
 <!--
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><cf><att><i>asdf</i></att><ods><od>no OD</od></ods></cf><cb><ef>asdf</ef><re>asdf</re></cb></ch>
 -->
@@ -275,6 +278,7 @@ const chems = {
 	"Chlorine Trifluoride": "ClF3/VILE/DO NOT",
 	"Genecide": "genecide/cell/EXPLODES/no OD",
 	"Desoxyephedrine": "desoxy/speed/POISON/30u OD",
+	"Tirimol": "tirimol/!!asphyx!!,bleeding/DRAINS STAMINA/15u OD",
 };
 var q = false;
 Array.from(document.getElementsByTagName('n')).forEach(n => {
