@@ -26,6 +26,7 @@ oc{order:2;flex-grow:0;}
 ef,re{font-size:smaller;}
 ef{order:1;text-align:left; padding:0 0 .25em 0;}
 re{order:2;text-align:right;padding:0 0 .25em 1em;}
+bd{text-align:center;border-bottom:1px solid #000;padding:0 12px;}
 pl,h,l,c,g,od[d][r],s[d],ci[d]{text-decoration:underline;}
 od[d]{text-decoration:underline dotted;}
 pl::before,al::before,bru::before,brn::before,tox::before{text-decoration:underline;}
@@ -249,6 +250,32 @@ note{margin-right:1em;margin-left:0.5em;}
 <!--
 <ch b style="background:#ffffff"><ct><n>Name</n><oc>n</oc></ct><cf><att><i>asdf</i></att><ods><od>no OD</od></ods></cf><cb><ef>asdf</ef><re>asdf</re></cb></ch>
 -->
+</cr><h3>Centrifuge</h3><cr>
+<ch b style="background:#a76b1c"><bd>10u welding fuel</bd><cb><ef></ef><re>ethanol 5u<br>hydrogen 3u<br>sulfur 2u</re></cb></ch>
+<ch b style="background:#b67823"><bd>10u oil</bd><cb><ef></ef><re>fat 6u<br>water 3u<br>protein 1u</re></cb></ch>
+<ch w style="background:#24591f"><bd>5u nutriment</bd><cb><ef></ef><re>water 2u<br>carbon 2u<br>sugar 1u</re></cb></ch>
+<ch b style="background:#d3d3d3"><bd>4u vitamin</bd><cb><ef></ef><re>carbon 1u<br>water 1u<br>nitrogen 2u</re></cb></ch>
+<ch b style="background:#808080"><bd>5u fuber &amp; <pl>10u water</pl></bd><cb><ef></ef><re>carbon 3u<br>sugar 2u</re></cb></ch>
+<ch b style="background:#f2e9d2"><bd>4u allicin</bd><cb><ef></ef><re>sulfur 2u<br>carbon 1u<br>water 1u</re></cb></ch>
+<ch b style="background:#ffe777"><bd>10u banana juice</bd><cb><ef></ef><re>sugar 5u<br>potassium 5u</re></cb></ch>
+<ch b style="background:#ffbebe"><bd>6u synthflesh</bd><cb><ef></ef><re>synthcells 4u<br>sodium 1u<br>carbon 1u</re></cb></ch>
+</cr><cr>
+<ch w style="background:#800000"><bd>20u blood</bd><cb><ef></ef><re>water 11.0u<br>iron &nbsp;0.5u<br>sugar &nbsp;2.0u<br>carbon dioxide &nbsp;3.0u<br>protein &nbsp;4.0u</re></cb></ch>
+<ch w style="background:#162581"><bd>20u hemocyanin blood</bd><cb><ef></ef><re>water 11.0u<br>copper &nbsp;0.5u<br>sugar &nbsp;2.0u<br>carbon dioxide &nbsp;3.0u<br>protein &nbsp;4.0u</re></cb></ch>
+<ch w style="background:#808A51"><bd>30u insect blood</bd><cb><ef></ef><re>water 11.0u<br>saline &nbsp;6.0u<br>chlorine &nbsp;1.5u<br>carbon dioxide &nbsp;5.5u<br>protein &nbsp;6.0u</re></cb></ch>
+<ch b style="background:#7a8bf2"><bd>30u ammonia blood</bd><cb><ef></ef><re>water 17.0u<br>nitrogen &nbsp;4.5u<br>chlorine &nbsp;2.5u<br>protein &nbsp;6.0u</re></cb></ch>
+<ch w style="background:#2b0700"><bd>4u zombie blood</bd><cb><ef></ef><re>mold 2u<br>protein 1u<br>toxin 1u</re></cb></ch>
+<ch b style="background:#cd7314"><bd>10u sap</bd><cb><ef></ef><re>water 9u<br>sugar 1u</re></cb></ch>
+<ch b style="background:#2cf274"><bd>5u slime</bd><cb><ef></ef><re>water 4u<br>nitrogen 1u</re></cb></ch>
+</cr><h3>Electrolyze</h3><cr>
+<ch b style="background:#75b1f0"><bd>3u water</bd><cb><ef></ef><re>hydrogen 2u<br>oxygen 1u</re></cb></ch>
+<ch b style="background:#cfd1d0"><bd>2u table salt</bd><cb><ef></ef><re>chlorine 1u<br>sodium 1u</re></cb></ch>
+<ch b style="background:#b05b3c"><bd>9u ethanol</bd><cb><ef></ef><re>hydrogen 6u<br>carbon 2u<br>oxygen 1u</re></cb></ch>
+<ch b style="background:#ffffe5"><bd>10u protein</bd><cb><ef></ef><re>carbon 2u<br>hydrogen 4u<br>phosphorus 3u<br>oxygen 1u</re></cb></ch>
+<ch b style="background:#d8d8b0"><bd>15u fat</bd><cb><ef></ef><re>carbon &nbsp;5u<br>hydrogen 10u<br>oxygen &nbsp;1u</re></cb></ch>
+<ch b style="background:#e6e6da"><bd>3u cellulose</bd><cb><ef></ef><re>sugar 2u<br>carbon 1u</re></cb></ch>
+<ch b style="background:#66ff33"><bd>3u carbon dioxide</bd><cb><ef></ef><re>carbon 1u<br>oxygen 2u</re></cb></ch>
+<ch b style="background:#5d88c9"><bd>3u nitrous oxide</bd><cb><ef></ef><re>nitrogen 2u<br>oxygen 1u</re></cb></ch>
 </cr><script>
 const chems = {
 	"Inaprovaline": "inaprov/asphyx & bleeding/WHENCRIT/no OD",
@@ -324,7 +351,7 @@ Array.from(document.getElementsByTagName('n')).forEach(n => {
 });
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
-	if(n !== 'HTML' && n !== 'BODY' && n !== 'A' && n !== 'FOOTER' && n !== 'EXTRA' && n !== 'NOTE' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS') {
+	if(n !== 'HTML' && n !== 'BODY' && n !== 'A' && n !== 'FOOTER' && n !== 'EXTRA' && n !== 'NOTE' && n !== 'CR' && n !== 'CH' && n !== 'CT' && n !== 'OC' && n !== 'CB' && n !== 'EF' && n !== 'RE' && n !== 'CF' && n !== 'ATT' && n !== 'I' && n !== 'ODS' && n !== 'BD') {
 		const xlat = (e.pageX / window.innerWidth) * (-100);
 		document.documentElement.style.cssText=(`--mouse-x:${e.pageX+6}px;--mouse-y:${e.pageY+8}px;--d-xlat:${xlat}%;`);
 		q = false;
