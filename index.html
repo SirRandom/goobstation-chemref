@@ -28,7 +28,7 @@ ef,re{font-size:smaller;}
 ef{order:1;text-align:left; padding:0 0 .25em 0;}
 re{order:2;text-align:right;padding:0 0 .25em 1em;}
 bd{text-align:center;border-bottom:1px solid #000;padding:0 12px;}
-pl,h,l,c,g,od[d][r],s[d],ci[d],dm,cl{text-decoration:underline;}
+pl,h,l,c,g,od[d][r],s[d],ci[d],dm,cl,cold,hot{text-decoration:underline;}
 od[d]{text-decoration:underline dotted;}
 pl::before,al::before,bru::before,brn::before,tox::before{text-decoration:underline;}
 ci::before{content:"C/I"}
@@ -41,6 +41,8 @@ oc:not(:empty)::before{content:"("}
 oc:not(:empty)::after{content:")"}
 dm::before{content:"deadmed"}
 cl::before{content:"cleans "}
+cold::before{content:"\000394K < 0"}
+hot::before{content:"\000394K > 0"}
 pl::after{content:"catalyst";}
 g::after{content:"grind";}
 h::after{content:"heat mix";}
@@ -48,14 +50,16 @@ l::after{content:"cool mix";}
 c::after{content:"cool body";}
 dm::after{content:"works on the dead";}
 cl::after{content:"cleans bloodstream at the indicated rate";}
+cold::after{content:"reaction cools mix"}
+hot::after{content:"reaction heats mix"}
 al::after{content:"airloss:\00000a- asphyx\00000a- bloodloss";}
 bru::after{content:"brute:\00000a- blunt\00000a- slash\00000a- piercing";}
 brn::after{content:"burn:\00000a- heat\00000a- shock\00000a- cold\00000a- caustic";}
 tox::after{content:"toxin:\00000a- poison\00000a- rads";}
-c::after,n::after,pl::after,al::after,bru::after,brn::after,tox::after,h::after,l::after,g::after,od[d]::after,s[d]::after,ci[d]::after,dm::after,cl::after
+c::after,n::after,pl::after,al::after,bru::after,brn::after,tox::after,h::after,l::after,g::after,od[d]::after,s[d]::after,ci[d]::after,dm::after,cl::after,cold::after,hot::after
 {white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);transform:translate(var(--d-xlat),0);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;text-wrap:nowrap;background-color:#000;color:#fff;}
 n::after{content:attr(d) "\00000acopy label?";color:red;border-color:red;}
-c:hover::after,n:hover::after,h:hover::after,l:hover::after,g:hover::after,pl:hover::after,al:hover::after,bru:hover::after,brn:hover::after,tox:hover::after,od[d]:hover::after,s[d]:hover::after,ci[d]:hover::after,dm:hover::after,cl:hover::after
+c:hover::after,n:hover::after,h:hover::after,l:hover::after,g:hover::after,pl:hover::after,al:hover::after,bru:hover::after,brn:hover::after,tox:hover::after,od[d]:hover::after,s[d]:hover::after,ci[d]:hover::after,dm:hover::after,cl:hover::after,cold:hover::after,hot:hover::after
 {visibility:visible;}
 i{margin:0 0 0 3px;font-size:smaller;}
 footer{position:fixed;bottom:0.5em;left:50vw;transform:translate(-50%,0);padding:0.5em 3em;background-color:#000;border:1px solid #fff;outline:2px solid #000;}
@@ -65,9 +69,9 @@ note{margin-right:1em;margin-left:0.5em;}
 <cr>
 <ch b style="background:#731024"><ct><n>Inaprovaline</n><oc>3</oc></ct><cf><att><i>opaque</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.1u/s<br>crit:<br>&nbsp;-2.00 asphyx<br>bleeding -0.25</ef><re>oxygen<br>carbon<br>sugar</re></cb></ch>
 <ch b style="background:#bf3d19"><ct><n>Kelotane</n><oc>2</oc></ct><cf><att><i>strong smelling</i></att><ods><od d="dehydration">30u</od></ods></cf><cb><ef>0.5u/s<br>-0.50 heat<br>-0.50 shock<br>-0.50 cold</ef><re>silicon<br>carbon</re></cb></ch>
-<ch w style="background:#0041a8"><ct><n>Dexalin</n><oc>3</oc></ct><cf><att><i>opaque</i></att><ods><od r d="+3.00 asphyx&#x0a;+1.00 cold">20u</od></ods></cf><cb><ef>0.5u/s<br>-1.00 asphyx<br>-0.50 bloodloss<br>suppress pain</ef><re>oxygen(2)<br><pl></pl></re></cb></ch>
+<ch w style="background:#0041a8"><ct><n>Dexalin</n><oc>3</oc></ct><cf><att><i>opaque</i></att><ods><od r d="+3.00 asphyx&#x0a;+1.00 cold">20u</od></ods></cf><cb><ef>0.5u/s<br>-1.00 asphyx<br>-0.50 bloodloss<br>suppress pain</ef><re>oxygen(2)<br><pl></pl><br><cold></cold></re></cb></ch>
 <ch b style="background:#4cb580"><ct><n>Hyronalin</n><oc>2</oc></ct><cf><att><i>cloudy</i></att><ods><od r d="+2.00 heat&#x0a;jittering">30u</od></ods></cf><cb><ef>0.5u/s<br>-1.00 rads<br>2% vomiting</ef><re>radium<br>dylovene</re></cb></ch>
-<ch w style="background:#22282b"><ct><n>Charcoal</n><oc>1</oc></ct><cf><att><i>porous</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-1.00 poison<br><cl>3u</cl></ef><re>carbon<br>ash</re></cb></ch>
+<ch w style="background:#22282b"><ct><n>Charcoal</n><oc>1</oc></ct><cf><att><i>porous</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-1.00 poison<br><cl>3u</cl></ef><re>carbon<br>ash<br><hot></hot></re></cb></ch>
 <ch b style="background:#40ffec"><ct><n>Antihol</n><oc>3</oc></ct><cf><att><i>syrupy</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>&gt;50 dmg:<br>&nbsp;-1.00 poison<br><s d="-5u ethanol">removes</s></ef><re>charcoal(2)<br>ethanol(1)</re></cb></ch>
 <ch w style="background:#2d5708"><ct><n>Ethylredoxrazine</n><oc>3</oc></ct><cf><att><i>opaque</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-0.50 poison<br>-drunkness</ef><re>oxygen<br>dylovene<br>carbon</re></cb></ch>
 <cc l>
@@ -83,9 +87,9 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch w style="background:#0064C8"><ct><n>Saline</n><oc>5</oc></ct><cf><att><i>salty</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>bloodlvl +12<br>sates thirst</ef><re>water(4)<br>table salt(1)</re></cb></ch>
 <ch b style="background:#a2af8a"><ct><n>Immurin</n><oc>3</oc></ct><cf><att><i>powdery</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>+0.0015 imm. rate<br>&nbsp;(strength +0.010)</ef><re>sugar<br>inaprovaline<br>iron</re></cb></ch>
 <ch b style="background:#559955"><ct><n>Spaceacilin</n><oc>3</oc></ct><cf><att><i>translucent</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-0.10 bacterial<br>-0.0008 imm. rate<br>&nbsp;(strength -0.004)</ef><re>immurin(2)<br>dylovene(1)</re></cb></ch>
-<ch b style="background:#995555"><ct><n>Devirate</n><oc>2</oc></ct><cf><att><i>opaque</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>+0.50 poison<br>-0.08 viral</ef><re>immurin(2)<br>copper(1)</re></cb></ch>
+<ch b style="background:#995555"><ct><n>Devirate</n><oc>2</oc></ct><cf><att><i>opaque</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>+0.50 poison<br>-0.08 viral</ef><re>immurin(2)<br>copper(1)<br><hot></hot></re></cb></ch>
 </cr><cr><cc g>
-<ch b style="background:#ff3636"><ct><n>Bruizine</n><oc>2</oc></ct><cf><att><i>mucus-like</i></att><ods><od r d="+4.00 poison">10.5u</od><ci d="mixing with&#x0a;- bicaridine&#x0a;- lacerinol&#x0a;- puncturase&#x0a;creates razorium"></ci></ods></cf><cb><ef>0.5u/s<br>-4.00 blunt</ef><re>bicaridine(1)<br>sugar(1)<br>lithium(0.9)</re></cb></ch>
+<ch b style="background:#ff3636"><ct><n>Bruizine</n><oc>2</oc></ct><cf><att><i>mucus-like</i></att><ods><od r d="+4.00 poison">10.5u</od><ci d="mixing with&#x0a;- bicaridine&#x0a;- lacerinol&#x0a;- puncturase&#x0a;creates razorium"></ci></ods></cf><cb><ef>0.5u/s<br>-4.00 blunt</ef><re>bicaridine(1)<br>sugar(1)<br>lithium(0.9)<br><hot></hot></re></cb></ch>
 <ch w style="background:#283332"><ct><n>Lacerinol</n><oc>2</oc></ct><cf><att><i>viscous</i></att><ods><od r d="+3.00 cold">12u</od><ci d="mixing with&#x0a;- bruizine&#x0a;- bicaridine&#x0a;- puncturase&#x0a;creates razorium"></ci></ods></cf><cb><ef>0.5u/s<br>-4.00 slash</ef><re>bicaridine<br>benzene<br><h>&gt;335K</h></re></cb></ch>
 <ch b style="background:#b9bf93"><ct><n>Puncturase</n><oc>2</oc></ct><cf><att><i>fizzy</i></att><ods><od r d="+5.00 blunt">11u</od><ci d="mixing with&#x0a;- bruizine&#x0a;- lacerinol&#x0a;- bicaridine&#x0a;creates razorium"></ci></ods></cf><cb><ef>0.5u/s<br>-4.00 piercing<br>+0.10 blunt</ef><re>bicaridine<br>hydroxide<br><h>&gt;325K</h></re></cb></ch>
 <ch b style="background:#baa15d"><ct><n>Potassium Iodide</n><oc>2</oc></ct><cf><att><i>grainy</i></att><ods><od r d="+1.00 poison">20u</od></ods></cf><cb><ef>0.5u/s<br>-0.25 rads<br>rads protection</ef><re>potassium<br>iodine</re></cb></ch>
@@ -97,7 +101,7 @@ note{margin-right:1em;margin-left:0.5em;}
 </cc><cc g><cr g><cc g>
 <ch w style="background:#35295f"><ct><n>Artiplates</n><oc>12</oc></ct><cf><att><i>cloudy</i></att><ods><od r d="+3.50 slash">11u</od></ods></cf><cb><ef>0.5u/s<br>-5.00 bloodloss<br>bleeding -1.00<br>bloodlvl +8</ef><re>saline(3)<br>tranexamic acid(2)<br>iron(1)<br>copper(1)<br><h>&gt;310K</h></re></cb></ch>
 <cr g>
-<ch w style="background:#422912"><ct><n>Ipecac</n><oc>2</oc></ct><cf><att><i>inky</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>>4u:<br>&nbsp;30% vomiting</ef><re>potassium<br>nitrogen<br>ammonia</re></cb></ch>
+<ch w style="background:#422912"><ct><n>Ipecac</n><oc>2</oc></ct><cf><att><i>inky</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>>4u:<br>&nbsp;30% vomiting</ef><re>potassium<br>nitrogen<br>ammonia<br><hot></hot></re></cb></ch>
 <ch w style="background:#192c00"><ct><n>Aloe</n><oc>5</oc></ct><cf><att><i>aromatic</i></att><ods></ods></cf><cb><ef></ef><re><g>aloe</g></re></cb></ch>
 </cr><cr g>
 <ch b style="background:#ffffff"><ct><n>Hydroxide</n><oc>2</oc></ct><cf><att><i>alkaline</i></att><ods></ods></cf><cb><ef></ef><re>oxygen<br>hydrogen<br><h>&gt;310K</h></re></cb></ch>
@@ -105,10 +109,10 @@ note{margin-right:1em;margin-left:0.5em;}
 </cr></cc><cc g>
 <ch b style="background:#a1000b"><ct><n>Polytrinic Acid</n><oc>3</oc></ct><cf><att><i>strong smelling</i></att><ods></ods></cf><cb><ef>3.0u/s<br>+11.00 caustic</ef><re>sulfuric acid<br>plasma<br>potassium</re></cb></ch>
 <ch w style="background:#5050ff"><ct><n>Fluorosulfuric Acid</n><oc>4</oc></ct><cf><att><i>strong smelling</i></att><ods></ods></cf><cb><ef>3.0u/s<br>+8.00 caustic</ef><re>fluorine<br>hydrogen<br>potassium<br>sulfuric acid</re></cb></ch>
-<ch b style="background:#bf8c00"><ct><n>Sulfuric Acid</n><oc>3</oc></ct><cf><att><i>oily</i></att><ods></ods></cf><cb><ef>3.0/s<br>+5.00 caustic</ef><re>oxygen(2)<br>hydrogen(1)<br>sulfur(1)</re></cb></ch>
+<ch b style="background:#bf8c00"><ct><n>Sulfuric Acid</n><oc>3</oc></ct><cf><att><i>oily</i></att><ods></ods></cf><cb><ef>3.0/s<br>+5.00 caustic</ef><re>oxygen(2)<br>hydrogen(1)<br>sulfur(1)<br><hot></hot></re></cb></ch>
 </cc></cr><cr g>
 <ch b style="background:#f0f0f0"><ct><n>Sodium Polyacrylate</n><oc>4</oc></ct><cf><att><i>grainy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>dessication</ef><re>oxygen(2)<br>sodium(1)<br>nitrogen(1)</re></cb></ch>
-<ch b style="background:#e7ea91"><ct><n>Benzene</n><oc>1</oc></ct><cf><att><i>acidic</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+1.00 cell</ef><re>hydrogen<br>carbon<br><h>&gt;310K</h></re></cb></ch>
+<ch b style="background:#e7ea91"><ct><n>Benzene</n><oc>1</oc></ct><cf><att><i>acidic</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+1.00 cell</ef><re>hydrogen<br>carbon<br><h>&gt;310K</h><br><hot></hot></re></cb></ch>
 <ch b style="background:#b67823"><ct><n>Oil</n><oc>3</oc></ct><cf><att><i>oily</i></att><ods></ods></cf><cb><ef></ef><re>welding fuel<br>hydrogen<br>carbon</re></cb></ch>
 </cr></cc><cc g>
 <ch b style="background:#22ff1a"><ct><n>Pentenic Acid</n><oc>4</oc></ct><cf><att><i>acidic</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.25u/s<br><cl>3u</cl><br>rads protection<br>-2.00 poison<br>-2.00 rads</ef><re>polytrinic acid<br>potassium iodide<br>haloperidol<br>cyanide</re></cb></ch>
@@ -117,7 +121,7 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#ffe774"><ct><n>Pulped Banana Peel</n><oc>4</oc></ct><cf><att><i>pulpy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>bleeding -0.50</ef><re><g>banana peel</g></re></cb></ch>
 </cc><cc g>
 <ch b style="background:#cac6bf"><ct><n>Oxandrolone</n><oc>4</oc></ct><cf><att><i>sticky</i></att><ods><od r d="+4.00 burn">25u</od></ods></cf><cb><ef>0.5u/s<br>&lt;25 <brn></brn>:<br>&nbsp;-4.00 <brn></brn><br>&gt;25 <brn></brn>:<br>&nbsp;-4.00 heat<br>&nbsp;-4.00 shock<br>&nbsp;-4.00 cold<br>&nbsp;-3.00 caustic<br></ef><re>sodium carbonate<br>dermaline<br>phenol<br>leporazine</re></cb></ch>
-<ch b style="background:#e0a5b9"><ct><n>Sigynate</n><oc>4</oc></ct><cf><att><i>thick</i></att><ods><od r d="+2.00 heat">16u</od><od d="jittering">20u</od><od d="2% vomiting">30u</od><ci d=">=1u arithrazine:&#x0a;&nbsp;10% vomiting"></ci></ods></cf><cb><ef>0.5u/s<br>-3.00 caustic</ef><re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><h>&gt;370K</h></re></cb></ch>
+<ch b style="background:#e0a5b9"><ct><n>Sigynate</n><oc>4</oc></ct><cf><att><i>thick</i></att><ods><od r d="+2.00 heat">16u</od><od d="jittering">20u</od><od d="2% vomiting">30u</od><ci d=">=1u arithrazine:&#x0a;&nbsp;10% vomiting"></ci></ods></cf><cb><ef>0.5u/s<br>-3.00 caustic</ef><re>sodium carbonate<br>sodium hydroxide<br>kelotane<br>water<br>sugar<br><h>&gt;370K</h><br><hot></hot></re></cb></ch>
 <ch b style="background:#86caf7"><ct><n>Ambuzol</n><oc>4</oc></ct><cf><att><i>crisp</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>10u:<br>&nbsp;<s d="stops an ongoing zombie infection&#x0a;does not revert a zombie back to a non-zombie">cures zombie</s></ef><re>zombie blood(2)<br>dylovene(1)<br>ammonia(1)</re></cb></ch>
 </cc><cc g>
 <ch w style="background:#211f3d"><ct><n>Umbroxol</n><oc>2</oc></ct><cf><att><i>dark</i></att><ods></ods></cf><cb><ef>0.5u/s<br>-2.00 holy<br>+3.00 cold</ef><re>unholy water<br>table salt<br>mercury</re></cb></ch>
@@ -131,12 +135,12 @@ note{margin-right:1em;margin-left:0.5em;}
 </cc></cr><cr>
 <ch b style="background:#77b58e"><ct><n>Ammonia</n><oc>4</oc></ct><cf><att><i>pungent</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+1.00 caustic<br><s d="(when rat inhales gas)&#x0a;-5.00 bloodloss&#x0a;-1.66 blunt&#x0a;-1.67 slash&#x0a;-1.67 piercing&#x0a;-1.25 heat&#x0a;-1.25 shock&#x0a;-1.25 cold&#x0a;-1.25 caustic">gas heals rats</s></ef><re>hydrogen(3)<br>nitrogen(1)</re></cb></ch>
 <ch b style="background:#e7ea91"><ct><n>Phenol</n><oc>2</oc></ct><cf><att><i>acidic</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+1.00 caustic<br>+2.00 poison</ef><re>hydroxide<br>benzene</re></cb></ch>
-<ch b style="background:#af14b7"><ct><n>Acetone</n><oc>2</oc></ct><cf><att><i>acidic</i></att><ods></ods></cf><cb><ef></ef><re>oil<br>welding fuel<br>oxygen</re></cb></ch>
+<ch b style="background:#af14b7"><ct><n>Acetone</n><oc>2</oc></ct><cf><att><i>acidic</i></att><ods></ods></cf><cb><ef></ef><re>oil<br>welding fuel<br>oxygen<br><hot></hot></re></cb></ch>
 <ch b style="background:#cfd1d0"><ct><n>Table Salt</n><oc>2</oc></ct><cf><att><i>grainy</i></att><ods></ods></cf><cb><ef>dehydration</ef><re>chlorine<br>sodium<br><h>&gt;370K</h></re></cb></ch>
 <ch b style="background:#c8ff69"><ct><n>Space Cleaner</n><oc>2</oc></ct><cf><att><i>lemony fresh</i></att><ods></ods></cf><cb><ef></ef><re>ammonia<br>water</re></cb></ch>
 <ch b style="background:#a1000b"><ct><n>Bleach</n><oc>5</oc></ct><cf><att><i>strong smelling</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+2.00 poison<br>+2.00 caustic</ef><re>table salt(2)<br>space cleaner(2)<br>sodium hydroxide(1)</re></cb></ch>
 <ch b style="background:#664330"><ct><n>EZ Nutrient</n><oc>3</oc></ct><cf><att><i>thick</i></att><ods></ods></cf><cb><ef>0.5u/s<br>diona:<br>&nbsp;sates hunger</ef><re>nitrogen<br>phosphorus<br>potassium</re></cb></ch>
-<ch b style="background:#77b58e"><ct><n>Space Lube</n><oc>5</oc></ct><cf><att><i>shiny</i></att><ods></ods></cf><cb><ef></ef><re>water<br>fersilicite<br>oxygen</re></cb></ch>
+<ch b style="background:#77b58e"><ct><n>Space Lube</n><oc>5</oc></ct><cf><att><i>shiny</i></att><ods></ods></cf><cb><ef></ef><re>water<br>fersilicite<br>oxygen<br><cold></cold></re></cb></ch>
 <ch b style="background:#63806e"><ct><n>Space Mirage</n><oc>3</oc></ct><cf><att><i>syrupy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>hallu</ef><re>mercury<br>sugar<br>lithium</re></cb></ch>
 <ch w style="background:#081a80"><ct><n>Cryptobiolin</n><oc>3</oc></ct><cf><att><i>fizzy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>stuttering<br>drunkness</ef><re>potassium<br>oxygen<br>sugar</re></cb></ch>
 </cr><cr><cc g><cr g><cc g>
@@ -145,7 +149,7 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#32cd32"><ct><n>Doxarubixadone</n><oc>2</oc></ct><cf><att><i>bubbling</i></att><dm></dm><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c><br>-2.00 cell</ef><re>cryoxadone<br>unstable mutagen</re></cb></ch>
 </cc><cc g>
 <ch b style="background:#86a5bd"><ct><n>Necrosol</n><oc>2</oc></ct><cf><att><i>necrotic</i></att><dm></dm><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;213K</c><br>-10.00 <al></al><br>-&nbsp;5.00 <bru></bru><br>-&nbsp;5.00 <brn></brn><br>-&nbsp;5.00 <tox></tox><br>bloodlvl +10</ef><re>blood(3)<br>cryoxadone(2)<br>omnizine(1)<br><h>&gt;370K</h></re></cb></ch>
-<ch b style="background:#b5e36d"><ct><n>Opporozidone</n><oc>3</oc></ct><cf><att><i>sickly</i></att><dm></dm><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;150K</c><br>-20s rotting</ef><re>phalanxamine(2)<br>plasma(2)<br>doxarubixadone(1)<br><h>&gt;400K</h></re></cb></ch>
+<ch b style="background:#b5e36d"><ct><n>Opporozidone</n><oc>3</oc></ct><cf><att><i>sickly</i></att><dm></dm><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br><c>&lt;150K</c><br>-20s rotting</ef><re>phalanxamine(2)<br>plasma(2)<br>doxarubixadone(1)<br><h>&gt;400K</h><br><hot></hot></re></cb></ch>
 <ch b style="background:#b50ee8"><ct><n>Cognizine</n><oc>1</oc></ct><cf><att><i>enigmatic</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>5u grants sentience</ef><re>carpotoxin<br>siderlac<br>acetone</re></cb></ch>
 </cc></cr><cr g>
 <ch w style="background:#404040"><ct><n>Oculine</n><oc>4</oc></ct><cf><att><i>translucent</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>heals eyes</ef><re>hydroxide(2)<br>table salt(1)<br>blood(1)</re></cb></ch>
@@ -165,7 +169,7 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#ad2cfa"><ct><n>Tramadol</n><oc>3</oc></ct><cf><att><i>thick</i></att><ods><od r d="+0.80 poison">15.5u</od><ci d="do not take with alcohol"></ci></ods></cf><cb><ef>0.1u/s<br>suppress pain<br>adrenaline</ef><re>acetone<br>inaprovaline<br>ethanol</re></cb></ch>
 <ch b style="background:#c8ff75"><ct><n>Phalanximine</n><oc>3</oc></ct><cf><att><i>acrid</i></att><ods><od r d="+0.20 rads">11u</od><ci d=">=1u arithrazine:&#x0a;&nbsp;+0.30 caustic"></ci></ods></cf><cb><ef>0.1u/s<br>-0.30 cell<br>+0.15 rads<br>+0.15 caustic</ef><re>hyronalin<br>ethanol<br>unstable mutagen</re></cb></ch>
 <ch b style="background:#3e901c"><ct><n>Robust Harvest</n><oc>1</oc></ct><cf><att><i>robust</i></att><ods><od r d="diona:&#x0a;&nbsp;+1.00 asphyx&#x0a;&nbsp;+2.00 heat&#x0a;&nbsp;+1.00 poison">30u</od><od r d="makes the diona into a tree">80u</od></ods></cf><cb><ef>0.5u/s<br>diona:<br>&nbsp;-2.00 poison<br>&nbsp;-3.00 blunt<br>&nbsp;-3.00 slash<br>&nbsp;-3.00 piercing</ef><re>ez nutrient<br><pl>sulfuric acid</pl></re></cb></ch>
-<ch b style="background:#8e8e8e"><ct><n>Aluite</n><oc>3</oc></ct><cf><att><i>bubbly</i></att><ods><od r d="+10.00 blunt">6u</od></ods></cf><cb><ef>3u/s<br><s d="-25u syriniver&#x0a;-50u ebifin&#x0a;-25u procenyl lazide&#x0a;-25u aluite">removes</s></ef><re>aluminium(3)<br>phenol(1)<br>sodium polyacrylate(1)<br><l>&lt;200K</l></re></cb></ch>
+<ch b style="background:#8e8e8e"><ct><n>Aluite</n><oc>3</oc></ct><cf><att><i>bubbly</i></att><ods><od r d="+10.00 blunt">6u</od></ods></cf><cb><ef>3u/s<br><s d="-25u syriniver&#x0a;-50u ebifin&#x0a;-25u procenyl lazide&#x0a;-25u aluite">removes</s></ef><re>aluminium(3)<br>phenol(1)<br>sodium polyacrylate(1)<br><l>&lt;200K</l><br><hot></hot></re></cb></ch>
 </cc><cc g>
 <ch b style="background:#27870a"><ct><n>Haloperidol</n><oc>5</oc></ct><cf><att><i>crystalline</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>drowsiness<br><s d="-3u desoyxephedrine&#x0a;-3u ephedrine&#x0a;-1u hyperzine&#x0a;-3u THC&#x0a;-3u space mirage&#x0a;-3u bananadine&#x0a;-3u space glue&#x0a;-3u mindbreaker toxin">removes</s></ef><re>aluminium<br>chlorine<br>fluorine<br>oil<br>potassium iodide</re></cb></ch>
 <ch b style="background:50% 21px/50% no-repeat url('data:image/svg+xml;charset=utf-8,%3Csvg%20style%3D%22height%3A%20512px%3B%20width%3A%20512px%3B%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20class%3D%22%22%20style%3D%22%22%20transform%3D%22translate(0%2C0)%22%3E%3Cpath%20d%3D%22M339.28%2022.78c-.668-.004-1.33.015-2%20.032-38.144%201.024-74.22%2038.912-57.31%2080.876-26.3%202.354-41.526%2027.584-38.345%2050.562%2010.39%2031.44%2033.868%2044.84%2061.625%2045-27.346%207.154-55.193%205.523-72.406-17.625L149.5%20212.313l108%2051.406c11.25-12.602%2026.22-17.474%2042.375-17.5%208.753-.016%2017.863%201.386%2026.906%203.75-20.033.113-37.856%207.13-50.124%2022.843l.313.156a40.469%2040.469%200%200%200-3.658%204.624c-.057.084-.13.165-.187.25-.242.38-.482.767-.72%201.156-.412.68-.82%201.387-1.217%202.094-.07.126-.15.247-.22.375-.003.007.005.022%200%20.03-11.695%2023.346%2012.238%2046.864%2036.938%2041.688-22.892%2036.36%2018.478%2064.646%2047.688%2057.062-10.04-25.77%202.36-50.004%2021.75-69.625-14.102%2024.75-13.893%2052.542%209.906%2077.78%2026.3%2018.466%2074.21%2015.382%2083.094-28.624%205.17%205.78%2015.042%2010.448%2022.687%2012.72V71.906c-17.245-40.312-69.907-46.36-98.592-10.25-13.265-27.505-34.395-38.723-55.157-38.875zm42.908%2079.876c-26.62%2022.628-41.455%2030.664-52.657%2061.375%201.347-24.357-3.39-39.26-21.936-53.81%2024.01%208.668%2047.858%208.277%2074.594-7.564zm26.875%2044.313c-11.567%2035.16%2022.327%2070.176%2054.75%2063.5-16.33%2017.418-37.404%2013.692-51.844.968-24.604%206.975-44.02%2034.767-34.845%2062.656-30.44-27.578-5.184-70.735%2024.625-74.97-9.305-15.74-9.998-36.473%207.313-52.155zm-284.157%2038.436c-7.5%200-14.256%201.248-18.28%202.78-1.657.632-2.427%201.163-2.94%201.533v46.03c.514.37%201.283.9%202.94%201.53%204.024%201.535%2010.78%202.782%2018.28%202.782%207.5%200%2014.257-1.247%2018.28-2.78%201.657-.632%202.427-1.162%202.94-1.532v-11.344c-6.513-.153-11.75-5.537-11.75-12.156%200-6.62%205.237-12.003%2011.75-12.156V189.72c-.513-.37-1.282-.902-2.94-1.532-4.024-1.534-10.78-2.782-18.28-2.782zM88.844%20247.5c-4.025%201.568-7.708%203.378-10.938%205.406-11.378%207.147-17.156%2015.95-17.156%2026.656%200%20.01-.028.906%202.406%202.938s6.928%204.494%2012.875%206.594c11.895%204.2%2029.47%207.063%2048.876%207.062%2019.407%200%2036.98-2.863%2048.875-7.062%205.95-2.1%2010.443-4.562%2012.876-6.594%202.434-2.032%202.406-2.93%202.406-2.938%200-9.758-5.77-18.805-17.218-26.156-3.284-2.11-7.013-4.012-11.094-5.656-.45.516-.902%201.004-1.375%201.438-2.818%202.58-6.013%204.22-9.53%205.562-7.037%202.68-15.56%204-24.94%204-9.378%200-17.9-1.32-24.936-4-3.52-1.34-6.715-2.983-9.532-5.563a17.549%2017.549%200%200%201-1.594-1.687zm-27.906%2055.53v192.533h127.937V303.03c-2.75%201.353-5.706%202.57-8.875%203.69-14.71%205.192-33.905%208.154-55.094%208.155-21.19%200-40.385-2.963-55.094-8.156-3.17-1.12-6.123-2.337-8.874-3.69z%22%20fill%3D%22%23000000%22%20fill-opacity%3D%220.15%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E') #ffed24">
@@ -174,14 +178,14 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#1abcff"><ct><n>Cyanide</n><oc>3</oc></ct><cf><att><i>powdery</i></att><ods></ods></cf><cb><ef>0.1u/s<br>+0.75 poison<br>+0.25 asphyx<br>5% paralysis for 2+s</ef><re>ammonia<br>oil<br>oxygen<br><h>&gt;380K</h></re></cb></ch>
 </cc><cc g>
 <ch b style="background:#9423ff"><ct><n>Polypyrylium Oligomers</n><oc>3</oc></ct><cf><att><i>pungent</i></att><ods><od r d="+3.5 asphyx">30u</od></ods></cf><cb><ef>0.5u/s<br>-2.50 asphyx<br>-3.50 <bru></bru><br>bleeding -0.25</ef><re><g>spaceman's<br>trumpet</g></re></cb></ch>
-<ch w style="background:#174f17"><ct><n>Triclor</n><oc>3</oc></ct><cf><att><i>pungent</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+4.00 blunt<br>+4.00 poison<br>bleeding +0.50<br>bloodlvl -5<br>vomiting<br>80% speed<br>stuttering<br>jittering</ef><re>chlorine(3)<br>ammonia(1)<br>sodium hydroxide(1)<br>ipecac(1)</re></cb></ch>
+<ch w style="background:#174f17"><ct><n>Triclor</n><oc>3</oc></ct><cf><att><i>pungent</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+4.00 blunt<br>+4.00 poison<br>bleeding +0.50<br>bloodlvl -5<br>vomiting<br>80% speed<br>stuttering<br>jittering</ef><re>chlorine(3)<br>ammonia(1)<br>sodium hydroxide(1)<br>ipecac(1)<br><hot></hot></re></cb></ch>
 <ch b style="background:#77b58e"><ct><n>Mindbreaker Toxin</n><oc>3</oc></ct><cf><att><i>opaque</i></att><ods></ods></cf><cb><ef>0.5u/s<br>hallu</ef><re>silicon<br>hydrogen<br>dylovene<br><h>&gt;370K</h></re></cb></ch>
 <ch b style="background:#5f959c"><ct><n>Heartbreaker Toxin</n><oc>2</oc></ct><cf><att><i>strong smelling</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+5.00 asphyx</ef><re>dexalin+<br>mindbreaker toxin</re></cb></ch>
 </cc><cc g>
 <ch b style="background:#ffa500"><ct><n>Formaldehyde</n><oc>2</oc></ct><cf><att><i>thick</i></att><dm></dm><ods><od d="10% add 0.2u histamine">30u</od></ods></cf><cb><ef>0.05u/s<br>-1s rotting<br>+0.50 poison</ef><re>ethanol<br>iron<br>silver<br><h>&gt;424K</h></re></cb></ch>
 <ch b style="background:#cf3600"><ct><n>Toxin</n><oc></oc></ct><cf><att><i>opaque</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+4.00 poison</ef><re></re></cb></ch>
 <ch b style="background:#a8a8af"><ct><n>Heroin</n><oc>2</oc></ct><cf><att><i>thick</i></att><ods><od r d="+2.00 poison&#x0a;+0.25 cold&#x0a;+0.75 asphyx&#x0a;hallu&#x0a;drunkness">10.5u</od></ods></cf><cb><ef>0.5u/s<br>suppress pain<br>adrenaline</ef><re><g>poppy</g></re></cb></ch>
-<ch b style="background:#fdd023"><ct><n>Licoxide</n><oc>1</oc></ct><cf><att><i>electric</i></att><ods></ods></cf><cb><ef>0.5u/s<br>35% electrocute</ef><re>lead<br>zinc</re></cb></ch>
+<ch b style="background:#fdd023"><ct><n>Licoxide</n><oc>1</oc></ct><cf><att><i>electric</i></att><ods></ods></cf><cb><ef>0.5u/s<br>35% electrocute</ef><re>lead<br>zinc<br><hot></hot></re></cb></ch>
 <ch b style="background:#d49a2f"><ct><n>Synaptizine</n><oc>3</oc></ct><cf><att><i>pungent</i></att><ods></ods></cf><cb><ef>0.5u/s<br>+2.00 poison<br>-stunning<br>-knockdown<br>-hallu</ef><re>lithium<br>sugar<br>water</re></cb></ch>
 </cc></cr><cr>
 <ch w style="background:#572757"><ct><n>Atropine</n><oc>4</oc></ct><cf><att><i>volatile</i></att><ods><od r d="+2.00 poison&#x0a;10% paralysis">35u</od></od></ods></cf><cb><ef>0.25u/s<br>&lt;35u <b>AND</b> crit:<br>&nbsp;-4.00 <al></al><br>&nbsp;-2.00 <bru></bru><br>&nbsp;-2.00 <brn></brn><br>&nbsp;-2.00 <tox></tox><br>bleeding -1.00<br>bloodlvl +5<br>jittering<br><s d="-3u sarin">removes</s></ef><re>acetone<br>diethylamine<br>phenol<br>ethanol</re></cb></ch>
@@ -219,7 +223,7 @@ note{margin-right:1em;margin-left:0.5em;}
 <ch b style="background:#07e79e"><ct><n>Psicodine</n><oc>4</oc></ct><cf><att><i>shiny</i></att><ods><od r d="+2.00 poison&#x0a;hallu">30u</od></ods></cf><cb><ef>0.5u/s<br>-jittering<br>-drunkenness</ef><re>mannitol(2)<br>water(2)<br>impedrezene(1)</re></cb></ch>
 </cc><cc g>
 <ch b style="background:#488bff"><ct><n>Cryostylane</n><oc>1</oc></ct><cf><att><i>cold</i></att><ods></ods></cf><cb><ef>cools solution<br>using oxygen or<br>iodine</ef><re>ice<br>plasma<br>nitrogen</re></cb></ch>
-<ch w style="background:#000067"><ct><n>Chloral Hydrate</n><oc>1</oc></ct><cf><att><i>nondescript</i></att><ods><od r d="+1.50 poison">20u</od></ods></cf><cb><ef>0.5u/s<br>drowsiness</ef><re>chlorine(3)<br>ethanol(1)<br>water(1)</re></cb></ch>
+<ch w style="background:#000067"><ct><n>Chloral Hydrate</n><oc>1</oc></ct><cf><att><i>nondescript</i></att><ods><od r d="+1.50 poison">20u</od></ods></cf><cb><ef>0.5u/s<br>65% speed<br>+4s drowsiness</ef><re>chlorine(3)<br>ethanol(1)<br>water(1)<br><hot></hot></re></cb></ch>
 <ch w style="background:#6e2828"><ct><n>Tirizene</n><oc>2</oc></ct><cf><att><i>syrupy</i></att><ods></ods></cf><cb><ef>0.5u/s<br>-13.00 stamina</ef><re>phenol<br>haloperidol<br>plasma</re></cb></ch>
 </cc><cc g><cr>
 <ch b style="background:#64ffe6"><ct><n>Diphenhydramine</n><oc>3</oc></ct><cf><att><i>chalky</i></att><ods><od>no OD</od></ods></cf><cb><ef>0.5u/s<br>-3.00 poison<br>drowsiness<br>-jittering<br><s d="-3u histamine">removes</s></ef><re>diethylamine<br>oil<br>table salt<br>carbon<br>ethanol<br><h>&gt;377.59K</h></re></cb></ch>
