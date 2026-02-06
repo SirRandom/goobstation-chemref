@@ -63,8 +63,8 @@ bru::after{content:"brute:\00000a- blunt\00000a- slash\00000a- piercing";}
 brn::after{content:"burn:\00000a- heat\00000a- shock\00000a- cold\00000a- caustic";}
 tox::after{content:"toxin:\00000a- poison\00000a- rads";}
 c::after,n::after,pl::after,al::after,bru::after,brn::after,tox::after,h::after,l::after,g::after,od[d]::after,s[d]::after,ci[d]::after,dm::after,cl::after,cold::after,hot::after,by[d]::after,decomp::after
-{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);transform:translate(var(--d-xlat),0);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;text-wrap:nowrap;background-color:#000;color:#fff;}
-n::after{content:attr(d) "\00000acopy label?";color:red;border-color:red;}
+{white-space:pre-wrap;display:block;visibility:hidden;position:absolute;z-index:99;left:var(--mouse-x);top:var(--mouse-y);transform:translate(var(--d-xlat),0);padding:4px 8px;border:1px solid #fff;outline:2px solid #000;text-wrap:nowrap;background-color:#000;color:#fff;margin-top:1.2em;}
+n::after{content:attr(d) "\00000aclick to copy label";color:red;border-color:red;}
 by[d]::after{content:"byproducts:\00000a" attr(d);}
 c:hover::after,n:hover::after,h:hover::after,l:hover::after,g:hover::after,pl:hover::after,al:hover::after,bru:hover::after,brn:hover::after,tox:hover::after,od[d]:hover::after,s[d]:hover::after,ci[d]:hover::after,dm:hover::after,cl:hover::after,cold:hover::after,hot:hover::after,by[d]:hover::after,decomp:hover::after
 {visibility:visible;}
