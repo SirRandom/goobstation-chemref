@@ -509,6 +509,9 @@ document.addEventListener('mousemove',e => {
 		q = true;
 	}
 },false);
+document.addEventListener('keydown',e => {
+	if(e.keyCode === 27) Array.from(document.getElementsByTagName('tabtgt')).forEach(x => x.classList.add('hidden'));
+});
 window.onload = e => {
 	var d = new Date();
 	d.setFullYear(2565);
