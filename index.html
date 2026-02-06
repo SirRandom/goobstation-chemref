@@ -499,7 +499,7 @@ Array.from(document.getElementsByTagName('n')).forEach(n => {
 });
 document.addEventListener('mousemove',e => {
 	const n = e.target.tagName;
-	const hover_whitelist = ['N','H','C','HOT','COLD','BRU','BRN','TOX','AL','S','G','CL','OD','PL','CI','DM','DECOMP','BY']
+	const hover_whitelist = ['N','H','C','L','HOT','COLD','BRU','BRN','TOX','AL','S','G','CL','OD','PL','CI','DM','DECOMP','BY']
 	if(hover_whitelist.includes(n)) {
 		const xlat = (e.pageX / window.innerWidth) * (-100);
 		document.documentElement.style.cssText=(`--mouse-x:${e.pageX+6}px;--mouse-y:${e.pageY+8}px;--d-xlat:${xlat}%;`);
